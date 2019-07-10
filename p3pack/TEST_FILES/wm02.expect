@@ -1,0 +1,52 @@
+begin simulation
+~@(2,2)
+w@(4,2)
+~@(4,4)
+|||||||
+|.e...|
+|.~...|
+|.....|
+|.w.~^|
+|||||||
+
+iteration 0
+w@(4,2) moving N
+map:
+|||||||
+|.e...|
+|.~...|
+|.w...|
+|...~^|
+|||||||
+
+iteration 1
+~@(2,2) spreading
+~@(1,2) spawned
+~@(2,3) spawned
+~@(3,2) spawned
+~@(2,1) spawned
+w@(3,2) moving N
+~@(4,4) spreading
+~@(3,4) spawned
+~@(4,5) spawned
+~@(4,3) spawned
+map:
+|||||||
+|.~...|
+|~~~..|
+|.~.~.|
+|..~~~|
+|||||||
+
+iteration 2
+w@(2,2) moving N
+w@(1,2) safe
+map:
+|||||||
+|.~...|
+|~~~..|
+|.~.~.|
+|..~~~|
+|||||||
+
+end simulation

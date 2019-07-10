@@ -1,0 +1,16 @@
+begin simulation
+f@(1,1)
+s@(1,2)
+||||
+|fs|
+||||
+
+iteration 0
+f@(1,1) moving E
+s@(1,2) killed f@(1,2)
+map:
+||||
+|.s|
+||||
+
+end simulation

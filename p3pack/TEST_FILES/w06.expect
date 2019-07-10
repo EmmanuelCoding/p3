@@ -1,0 +1,55 @@
+begin simulation
+w@(1,1)
+||||||
+|w.v.|
+|..e<|
+|..^e|
+||||||
+
+iteration 0
+w@(1,1) moving E
+map:
+||||||
+|.wv.|
+|..e<|
+|..^e|
+||||||
+
+iteration 1
+w@(1,2) moving E
+map:
+||||||
+|..w.|
+|..e<|
+|..^e|
+||||||
+
+iteration 2
+w@(1,3) moving E
+map:
+||||||
+|..vw|
+|..e<|
+|..^e|
+||||||
+
+iteration 3
+w@(1,4) moving S
+map:
+||||||
+|..v.|
+|..ew|
+|..^e|
+||||||
+
+iteration 4
+w@(2,4) moving S
+w@(3,4) safe
+map:
+||||||
+|..v.|
+|..e<|
+|..^w|
+||||||
+
+end simulation

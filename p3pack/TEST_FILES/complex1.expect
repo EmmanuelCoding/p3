@@ -1,0 +1,226 @@
+begin simulation
+s@(2,1)
+f@(7,4)
+s@(8,6)
+||||||||
+|......e
+|s|.||||
+|.|....|
+|.||||||
+|.<....|
+|.||||.|
+|.||f.^|
+|.|..|s|
+|e||||||
+
+iteration 0
+f@(7,4) moving E
+map:
+||||||||
+|......e
+|s|.||||
+|.|....|
+|.||||||
+|.<....|
+|.||||.|
+|.||.f^|
+|.|..|s|
+|e||||||
+
+iteration 1
+f@(7,5) moving E
+map:
+||||||||
+|......e
+|s|.||||
+|.|....|
+|.||||||
+|.<....|
+|.||||.|
+|.||..f|
+|.|..|s|
+|e||||||
+
+iteration 2
+f@(7,6) moving N
+map:
+||||||||
+|......e
+|s|.||||
+|.|....|
+|.||||||
+|.<....|
+|.||||f|
+|.||..^|
+|.|..|s|
+|e||||||
+
+iteration 3
+s@(2,1) spreading
+s@(1,1) spawned
+s@(3,1) spawned
+f@(6,6) moving N
+s@(8,6) spreading
+s@(7,6) spawned
+map:
+||||||||
+|s.....e
+|s|.||||
+|s|....|
+|.||||||
+|.<...f|
+|.||||.|
+|.||..s|
+|.|..|s|
+|e||||||
+
+iteration 4
+f@(5,6) moving W
+map:
+||||||||
+|s.....e
+|s|.||||
+|s|....|
+|.||||||
+|.<..f.|
+|.||||.|
+|.||..s|
+|.|..|s|
+|e||||||
+
+iteration 5
+f@(5,5) moving W
+map:
+||||||||
+|s.....e
+|s|.||||
+|s|....|
+|.||||||
+|.<.f..|
+|.||||.|
+|.||..s|
+|.|..|s|
+|e||||||
+
+iteration 6
+f@(5,4) moving W
+map:
+||||||||
+|s.....e
+|s|.||||
+|s|....|
+|.||||||
+|.<f...|
+|.||||.|
+|.||..s|
+|.|..|s|
+|e||||||
+
+iteration 7
+s@(2,1) spreading
+f@(5,3) moving W
+s@(8,6) spreading
+s@(1,1) spreading
+s@(1,2) spawned
+s@(3,1) spreading
+s@(4,1) spawned
+s@(7,6) spreading
+s@(6,6) spawned
+s@(7,5) spawned
+map:
+||||||||
+|ss....e
+|s|.||||
+|s|....|
+|s||||||
+|.f....|
+|.||||s|
+|.||.ss|
+|.|..|s|
+|e||||||
+
+iteration 8
+f@(5,2) moving W
+map:
+||||||||
+|ss....e
+|s|.||||
+|s|....|
+|s||||||
+|f<....|
+|.||||s|
+|.||.ss|
+|.|..|s|
+|e||||||
+
+iteration 9
+f@(5,1) moving S
+map:
+||||||||
+|ss....e
+|s|.||||
+|s|....|
+|s||||||
+|.<....|
+|f||||s|
+|.||.ss|
+|.|..|s|
+|e||||||
+
+iteration 10
+f@(6,1) moving S
+map:
+||||||||
+|ss....e
+|s|.||||
+|s|....|
+|s||||||
+|.<....|
+|.||||s|
+|f||.ss|
+|.|..|s|
+|e||||||
+
+iteration 11
+s@(2,1) spreading
+f@(7,1) moving S
+s@(8,6) spreading
+s@(1,1) spreading
+s@(3,1) spreading
+s@(7,6) spreading
+s@(1,2) spreading
+s@(1,3) spawned
+s@(4,1) spreading
+s@(5,1) spawned
+s@(6,6) spreading
+s@(5,6) spawned
+s@(7,5) spreading
+s@(7,4) spawned
+map:
+||||||||
+|sss...e
+|s|.||||
+|s|....|
+|s||||||
+|s<...s|
+|.||||s|
+|.||sss|
+|f|..|s|
+|e||||||
+
+iteration 12
+f@(8,1) moving S
+f@(9,1) safe
+map:
+||||||||
+|sss...e
+|s|.||||
+|s|....|
+|s||||||
+|s<...s|
+|.||||s|
+|.||sss|
+|.|..|s|
+|f||||||
+
+end simulation

@@ -1,0 +1,2246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>CS 211 Project 3: Panic!</title>
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="firstauthor" content="Mark Snyder" />
+<meta  name="secondauthor" content="Michael Neary" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">CS 211 Project 3: Panic!</h1>
+<meta name="viewport" content="width=device-width, maximum-scale=1, minimum-scale=1" />
+<style type="text/css"> 
+@media screen {
+    html { 
+        font-family: serif; 
+        text-align: justify; 
+    } 
+    .src, .example { 
+      background-color: rgb(245,245,225); /*rgb(225,245,225)*/; 
+    } 
+    pre.src, pre.example { 
+      overflow-x: scroll; 
+    } 
+    /* Merge subtitle area with title area */ 
+    .subtitle { 
+        text-align: center;
+        margin-top: -2em;
+        padding-top: 1em;
+        padding-bottom: 0.1em;
+    }
+    .title, .subtitle { color: white; background-color: #006633; }
+    /* Mason green section borders, left section header style */ 
+    div.outline-2, #table-of-contents { 
+        background-color: rgb(250,250,250);
+        border: 0.75em solid #006633; 
+        border-top: 0em;
+        padding: 0em .5em .5em .5em; /* top right bottom left */
+        margin: 1em 0em 1em 0em; /* top right bottom left */
+    } 
+    div.outline-2 > h2, #table-of-contents > h2 { 
+        background-color: #006633;
+        color: white;
+        font-variant: small-caps; 
+        padding: 0em 0em 0em .5em; /* top right bottom left */
+        margin: 0em -.5em 0em -.75em; /* top right bottom left */
+        text-align: left;
+    }
+    blockquote {
+        font-style: italic;
+    }
+    td, th {
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+    body {
+        background-color: #EEE;
+    }
+    pre {
+    }
+    #content, #preamble, #postamble {
+        margin-left:200px;
+    }
+    .tag {
+      background-color: inherit; font-family: inherit;
+      padding: inherit; font-size: 80%; font-weight: inherit;
+      text-transform: uppercase;
+    }
+    
+    .figure p { text-align: inherit; }
+    figure-number { font-style: italic; }
+    #table-of-contents {
+      text-align: left; 
+      position: fixed;
+      left: 0;
+      margin: 0 auto;
+      padding: 0;
+      width: 200px;
+      top: 0;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+    #text-table-of-contents {
+      overflow-y: scroll; 
+      height: 100%;
+    }
+    #text-table-of-contents ul {
+        padding-left: 1em; 
+        margin-left: 0.5em; 
+    }
+    #table-of-contents > h2 { 
+        padding: 0.1em; 
+        margin: 0; 
+    }
+    /* adjustments for small screen, toc at top only */
+    @media (max-width: 570px) { /* landscape for iphone */
+      html {
+         -webkit-text-size-adjust: none;  /* prevent scaling of text on mobile */
+      }
+      body {
+        background-color: #EEE;
+        width:100%;
+        margin:0 auto;
+      }
+      #content, #preamble, #postamble {
+          margin-left:0;
+      }
+      #table-of-contents {
+        position: static;
+        left: inherit;
+        width:inherit;
+        height: auto;
+        border-top: 0em;
+        padding: 0em .5em .5em .5em; /* top right bottom left */
+        margin: 1em 0em 1em 0em; /* top right bottom left */
+        border: 0.75em solid #006633; 
+      }
+    div.outline-2, #table-of-contents { 
+        background-color: rgb(250,250,250);
+        border: 0.75em solid #006633; 
+        border-top: 0em;
+        padding: 0em .5em .5em .5em; /* top right bottom left */
+        margin: 1em 0em 1em 0em; /* top right bottom left */
+    } 
+    div.outline-2 > h2, #table-of-contents > h2 { 
+        background-color: #006633;
+        color: white;
+        font-variant: small-caps; 
+        padding: 0em 0em 0em .5em; /* top right bottom left */
+        margin: 0em -.5em 0em -.75em; /* top right bottom left */
+        text-align: left;
+    }
+      #text-table-of-contents {
+        overflow-y: visible; 
+        height: inherit;
+      }
+      #text-table-of-contents ul {
+          padding-left: 1em; 
+          margin-left: 0.5em; 
+      }
+    }
+    .linenr { font-size: xx-small; }
+}
+
+@media print {
+    html {
+        font-family: serif; 
+        font-size: 10pt;
+        text-align: justify; 
+        .linenr { font-size: xx-small; }
+    }
+}
+</style>
+<ul class="org-ul">
+<li><b>July 12th by 11:59 pm</b>
+</li>
+<li>Submit to  <a href="https://mymasonportal.gmu.edu/"><b>Blackboard</b></a>
+</li>
+</ul>
+
+<p>
+<b>CODE DISTRIBUTION</b>
+</p>
+<ul class="org-ul">
+<li>Test Files (on Piazza as p3pack.zip):
+<ul class="org-ul">
+<li><code>JUnit</code> test files under <code>p3pack/</code>
+</li>
+<li><code>TEST_FILES/</code>, which is a directory of required files to run the
+tests. (Must be presentin same directory as the JUnit tests to pass!)
+</li>
+<li><code>samples/</code> directory, with maps and outputs for each simulation
+run.
+</li>
+<li>Javadoc under <code>p3doc/</code> <a href="p3doc/index.html">quick link</a>. (describes just the structure, with minimal/no javadoc comments, you'll improve on this before you submit!)
+</ul>
+</li>
+</ul>
+
+<p>
+<b>CHANGELOG:</b> 
+</p>
+<ul class="org-ul"><li>None (yet)</li></ul>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Introduction</a>
+<ul>
+<li><a href="#sec-1-1">Type Hierarchy</a></li>
+<li><a href="#sec-1-2">Map Representations</a></li>
+<li><a href="#sec-1-3">Sample Runs</a></li>
+<li><a href="#sec-1-4">Log Messages</a></li>
+<li><a href="#sec-1-5">Suggestion!</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2. Interfaces</a>
+<ul>
+<li><a href="#sec-2-1">interface Representable</a></li>
+<li><a href="#sec-2-2">interface Passable</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3. Enumerations</a>
+<ul>
+<li><a href="#sec-3-1"><code>enum Status</code></a></li>
+<li><a href="#sec-3-2"><code>enum Direction</code></a></li>
+<li><a href="#sec-3-3"><code>enum Spot implements Representable, Passable</code></a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4. Classes</a>
+<ul>
+<li><a href="#sec-4-1">class Coord</a></li>
+<li><a href="#sec-4-2">class Map</a></li>
+<li><a href="#sec-4-3">class Panic</a></li>
+<li><a href="#sec-4-4">class Thing</a></li>
+<li><a href="#sec-4-5">class Threat</a></li>
+<li><a href="#sec-4-6">class StickyIcky</a></li>
+<li><a href="#sec-4-7">class Smoke</a></li>
+<li><a href="#sec-4-8">class Person</a></li>
+<li><a href="#sec-4-9">class Weirdo</a></li>
+<li><a href="#sec-4-10">class Follower</a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6. Grading</a>
+<ul>
+<li><a href="#sec-6-1">Automated Tests (50%)</a></li>
+<li><a href="#sec-6-2">Manual Inspection (50%)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+This project is called <i>Panic!</i> We will describe a single-level
+floorplan of a building, filled with different kinds of people and
+different kinds of threats. We will simulate how the people seek to
+evacuate the building to safety, and how the threats spread throughout
+the building. Various events will be announced, such as person
+movements, threats spawning, and people reaching safety or succumbing
+to the threats. We will read a map representation from a file, and we
+will write the messages to either a file or just <code>System.out</code> as
+directed.
+</p>
+
+<p>
+In implementing this project, you will gain experience with a couple
+of new features, such as enumerations (both simple and complex) and
+interfaces. This will be a significantly larger project than we've had
+before! Hopefully you begin to see how larger programs truly need the
+mechanisms we've been learning in order to scale up successfully.
+</p>
+
+<p>
+One quick note - parts of the manual inspection criteria ("Coding
+Style and Readability") involve writing proper <code>JavaDoc</code> comments for
+classes/enums/interfaces, as well as for their members. You might as
+well do that from the beginning, and save yourself some valuable time
+at the end of the project.
+</p>
+</div>
+
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1">Type Hierarchy</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+There are 15 <code>.java</code> files of varying size to implement in this
+project. Your effort is partially spent understanding
+the organization of the eventual solution. The files fall into the
+following hierarchy.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-text">Interfaces:
+ - Representable
+ - Passable
+
+Enumerations:
+ - Status
+ - Direction
+ - Spot
+
+Classes:
+ - class Coord
+ - class Map
+ - class Panic (P4)
+
+ - Thing
+   +--Threat
+   |  +--StickyIcky
+   |  +--Smoke
+   +--Person
+      +--Weirdo
+      +--Follower
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2">Map Representations</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Maps describe the layout of a floorplan, as well as the intial
+location of all things. Here is a sample map:
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh">||||||||||
+||z...ss||
+|||||.|.||
+|.v..~.&lt;||
+||.||||f||
+||e|||||||
+</pre>
+</div>
+
+<p>
+On our maps, we represent various spots and things with specific
+characters. They are all catalogued here in one place for convenience.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">Spot/Thing</th>
+<th scope="col" class="left">representation</th>
+<th scope="col" class="left">description</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td class="left">Follower</td>
+<td class="left">f</td>
+<td class="left">lowercase f</td>
+</tr>
+
+<tr>
+<td class="left">Weirdo</td>
+<td class="left">w</td>
+<td class="left">lowercase w</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="left">StickyIcky</td>
+<td class="left">s</td>
+<td class="left">lowercase s</td>
+</tr>
+
+<tr>
+<td class="left">Smoke</td>
+<td class="left">~</td>
+<td class="left">tilde</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="left">Open</td>
+<td class="left">.</td>
+<td class="left">period</td>
+</tr>
+
+<tr>
+<td class="left">Wall</td>
+<td class="left">&vert;</td>
+<td class="left">vertical bar</td>
+</tr>
+
+<tr>
+<td class="left">Exit</td>
+<td class="left">e</td>
+<td class="left">lowercase e</td>
+</tr>
+
+<tr>
+<td class="left">SignN</td>
+<td class="left">^</td>
+<td class="left">caret</td>
+</tr>
+
+<tr>
+<td class="left">SignE</td>
+<td class="left">&gt;</td>
+<td class="left">greater-than</td>
+</tr>
+
+<tr>
+<td class="left">SignS</td>
+<td class="left">v</td>
+<td class="left">lowercase v</td>
+</tr>
+
+<tr>
+<td class="left">SignW</td>
+<td class="left">&lt;</td>
+<td class="left">less-than</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3">Sample Runs</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Running a simulation causes multiple messages to be written, enough to
+describe the entire outcome of the simulation. We provide one sample
+run here, and provide many other runs as separate files (provided in p3pack.zip on Piazza, under the folder <code>samples/</code>). They are paired
+together: each <code>mapX.txt</code> file corresponds to the same-numbered
+<code>outX.txt</code> file.
+</p>
+
+<p>
+When we run the command:
+</p>
+<pre class="example">
+java Panic "samples/map1.txt" "samples/out1.txt"
+</pre>
+
+<p>
+we should read the file <code>map1.txt</code> and generate the file <code>out1.txt</code>,
+both shown below.
+</p>
+</div>
+
+<div id="outline-container-sec-1-3-1" class="outline-4">
+<h4 id="sec-1-3-1">Description of this simulation</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+In this simulation, a <code>Follower</code> sees the sign and runs to the exit
+and to safety, while a <code>Weirdo</code> can't go north, turns right, goes
+east, and then realizes the only options are forward into a StickyIcky
+(never desired) or backwards onto the previous location (never
+allowed), and stays put until the <code>StickyIcky</code> spawns another
+<code>StickyIcky</code> in the same spot, which kills him then. With no more
+escaping people remaining, the simulation is done.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-3-2" class="outline-4">
+<h4 id="sec-1-3-2">map1.txt</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<div class="org-src-container">
+
+<pre class="src src-text">|||||||||||
+|v.f..w.s||
+|.|||||||||
+|.|||||||||
+|e|||||||||
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-3-3" class="outline-4">
+<h4 id="sec-1-3-3">out1.txt</h4>
+<div class="outline-text-4" id="text-1-3-3">
+<div class="org-src-container">
+
+<pre class="src src-text">begin simulation
+f@(1,3)
+w@(1,6)
+s@(1,8)
+|||||||||||
+|v.f..w.s||
+|.|||||||||
+|.|||||||||
+|e|||||||||
+
+iteration 0
+f@(1,3) moving W
+w@(1,6) moving E
+map:
+|||||||||||
+|vf....ws||
+|.|||||||||
+|.|||||||||
+|e|||||||||
+
+iteration 1
+f@(1,2) moving W
+w@(1,7) staying here
+map:
+|||||||||||
+|f.....ws||
+|.|||||||||
+|.|||||||||
+|e|||||||||
+
+iteration 2
+f@(1,1) moving S
+w@(1,7) staying here
+map:
+|||||||||||
+|v.....ws||
+|f|||||||||
+|.|||||||||
+|e|||||||||
+
+iteration 3
+f@(2,1) moving S
+w@(1,7) staying here
+s@(1,8) spreading
+s@(1,7) spawned
+s@(1,7) killed w@(1,7)
+map:
+|||||||||||
+|v.....ss||
+|.|||||||||
+|f|||||||||
+|e|||||||||
+
+iteration 4
+f@(3,1) moving S
+f@(4,1) safe
+map:
+|||||||||||
+|v.....ss||
+|.|||||||||
+|.|||||||||
+|f|||||||||
+
+end simulation
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1-4" class="outline-3">
+<h3 id="sec-1-4">Log Messages</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+We have various entities in our program send messages to the same
+logger, assumed to target either a file or just <code>System.out</code>. They are
+described in the relevant methods below, but are also collected here
+for convenience. You might want to start by looking at an entire
+simluation (see <a href="#sec-1-3">Sample Runs</a>).
+</p>
+
+<ul class="org-ul">
+<li>After <code>Map</code>'s <code>iterate()</code> method lets each <code>Thing</code> take action,
+write "<code>map:</code>" on one line, and the map's representation
+afterwards. Example:
+
+<pre class="example">
+map:
+|||||||||||
+|v.f..z.s||
+|.|||||||||
+|.|||||||||
+|e|||||||||
+</pre>
+</li>
+
+<li>Panic's <code>main</code> method: begins and ends the simulation; shows
+initial positions of all <code>things</code>; and labels each iteration of the map:
+<ul class="org-ul">
+<li>beginning:
+<pre class="example">
+begin simulation
+f@(1,3)
+w@(1,6)
+s@(1,8)
+</pre>
+</li>
+<li>each iteration (starting at 0):
+<pre class="example">
+iteration 0
+</pre>
+</li>
+<li>ending
+<pre class="example">
+end simulation
+</pre>
+</li>
+</ul>
+</li>
+<li>Person has changed location (use correct character, location, and
+direction):
+<pre class="example">
+w@(4,1) moving E
+</pre>
+</li>
+<li>Person has changed location and landed on a spot of type exit (exit
+spots are described below):
+<pre class="example">
+w@(4,2) safe
+</pre>
+</li>
+<li>escaping Person has no more options, and is staying in
+place. (Note, safe/dead people don't send any more messages).
+<pre class="example">
+w@(4,2) staying here
+</pre>
+</li>
+<li>A threat is spreading (full charge, spawning up to 4 adjacent copies):
+<pre class="example">
+s@(1,8) spreading
+</pre>
+</li>
+<li>Some <code>StickyIcky</code> has spawned at a new location:
+<pre class="example">
+s@(4,5) spawned
+</pre>
+</li>
+<li><code>StickyIcky</code> has killed a person at the same location:
+<pre class="example">
+s@(4,5) killed a@(4,5)
+</pre>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1-5" class="outline-3">
+<h3 id="sec-1-5">Suggestion!</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+It may seem a bit daunting at first needing to create so many files,
+entirely on your own. We suggest the following order of operations:
+</p>
+<ul class="org-ul">
+<li>Create all files, and add in any "method stubs" that the compiler
+complains are missing (just as we gave you in project 1), so that
+the JUnit tests file can be used when published. Even though
+most/all of the test cases may fail, its purpose is to guide your
+progress throughout the programming process, not just as a
+certification sticker you earn at the very end.
+</li>
+<li>Read the spec well enough to get a sense of what methods and
+classes will depend upon each other, so that you know which ones
+are best to begin with.
+</li>
+<li>Draw a class hierarchy diagram and label where definitions are
+introduced or overridden.
+</li>
+<li>Choose a specific class and specific method to work on first,
+running test cases to see if it shows the expected behavior. <b>don't
+move on until</b> you're certain you understand its purpose, the
+requirements of it, and that you have a complete and correct
+definition. It's tempting to start adding code all over the place,
+but you can quickly sink (tens of) hours fruitlessly into any
+programming project if you are not disciplined in your approach. If
+you've found yourself putting in those kinds of hours on CS
+112/CS211 projects, chances are you aren't giving yourself a
+specific small task to complete, or you're making changes somewhat
+arbitrarily instead of being convinced that each change is the
+actual solution to your current bug or goal.
+</li>
+<li>When you get stuck, you probably have a specific test case that
+fails or a specific runtime raised exception to deal with. Inspect
+the test case; read through the traceback; trace through your code
+by hand and think about where the two paths diverge. Add print
+statements to show you values during computation, as well as simply
+showing you where your code goes. If you are still stuck, consider
+exploring the debugger.
+</li>
+</ul>
+
+<p>
+Only work on one small portion of code at a time. When it stops
+compiling, you know the single small area that is likely the culprit.
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Interfaces</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Interfaces collect any number of abstract methods together as a new
+type. All methods in an interface are implicitly <code>public</code>. Any class
+that formally implements all these methods and promises the fact (with
+an <code>implements</code> clause) may be used as the type this interface
+creates. There are some more advanced ways to use interfaces that we
+won't need - creating default implementations, adding <code>public static
+final</code> fields, and extending other interfaces. Those are interesting
+concepts but we don't need them for this project.
+</p>
+</div>
+
+<div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1">interface Representable</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+<code>Representable</code> things indicate how to be displayed on a
+<code>Map</code>. <code>toString</code> might have been used, but maps aren't the only time
+we might want to represent things as strings.
+</p>
+</div>
+<div id="outline-container-sec-2-1-1" class="outline-4">
+<h4 id="sec-2-1-1">Methods</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li><b>public abstract String repr();</b>. Returns the (usually
+single-character-long) string representation. For instance, an exit
+may be represented by "e".
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2">interface Passable</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+We care if we are able to look past various things and spots on a map,
+and we also care if a human is able to walk past various things and
+spots on a map. The spots and things don't need to share a parent
+class, and only a couple methods are necessary to fulfill this
+behavior, so it's appropriate to use an interface.
+</p>
+</div>
+<div id="outline-container-sec-2-2-1" class="outline-4">
+<h4 id="sec-2-2-1">Methods</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<ul class="org-ul">
+<li><b>public abstract boolean canLookThrough()</b>. Can a human look
+through or beyond this entity? For open spaces, yes. For persons,
+yes we are able to look beyond them (they aren't transparent, but
+they also don't fully block the entirety of our vision in that
+direction; you can usually see down a hallway even if someone is
+currently in that hallway). For walls, no, and for smoke, no - it's
+obscured the entire view. Each entity will describe its own
+properties.
+</li>
+<li><b>public abstract boolean canPassThrough()</b>. Regardless of
+visibility, can a human get through a spot on the map containing
+this entity? We can walk through open spots and smoke, even though
+one we can look through and the other we cannot. Each entity will
+describe its own passability properties.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2-2" class="outline-4">
+<h4 id="sec-2-2-2">Manual Inspection Criteria Reminder</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<ul class="org-ul">
+<li>these two methods in the interface should be called when
+appropriate, rather than checking for individual types of
+objects. One hint you need to approach things differently would be
+excessive (any?) uses of <code>instanceof</code>.
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Enumerations</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Enumerations help us list a finite group of values. They are actually
+plain class-style objects underneath, but by using enumeration syntax
+to create them, we guarantee that only the finite listing of objects
+we create will exist. It's useful for recording things that have a
+finite number of values, such as the days of the week. In our project,
+we will use these enumerations:
+</p>
+</div>
+
+<div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><code>enum Status</code></h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+We have people moving around on our <code>Map</code>, so we want to know what
+their status is. People will start as <code>Escaping</code>, and either become
+<code>Safe</code> or <code>Dead</code>. I hope you are able to save them!
+</p>
+</div>
+<div id="outline-container-sec-3-1-1" class="outline-4">
+<h4 id="sec-3-1-1">Values</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<ul class="org-ul">
+<li><code>Escaping</code>, <code>Safe</code>, <code>Dead</code>.
+</li>
+</ul>
+<p>
+There are no special methods to create.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><code>enum Direction</code></h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+People are always facing certain directions. Signs that point out
+where an exit is will also have a direction as part of their
+representation. 
+</p>
+</div>
+<div id="outline-container-sec-3-2-1" class="outline-4">
+<h4 id="sec-3-2-1">Values</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<ul class="org-ul">
+<li><code>N</code>, <code>E</code>, <code>S</code>, <code>W</code>, and <code>none</code>.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-3-2-2" class="outline-4">
+<h4 id="sec-3-2-2">Methods</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<ul class="org-ul">
+<li><b>public Direction cycle()</b>. Given a <code>Direction</code>, cycle around to
+the next direction in clockwise fashion: <code>N</code> &rarr; <code>E</code>, <code>E</code>
+&rarr; <code>S</code>, <code>S</code> &rarr; <code>W</code>, <code>W</code> &rarr; <code>N</code>, <code>none</code>
+&rarr; <code>none</code>.
+</li>
+<li><b>public Direction getOpposite()</b>. Given a <code>Direction</code>, report back
+the opposite direction. <code>N</code> / <code>S</code> report each other, <code>E</code> / <code>W</code> report each
+other, and <code>none</code> reports itself.
+</li>
+<li><b>public boolean isOpposite(Direction other)</b>. reports if the given
+direction is opposite of the other. <code>none</code> is never opposite
+anything else, but <code>N</code> / <code>S</code> are opposites and <code>E</code> / <code>W</code> are
+opposites.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-3-2-3" class="outline-4">
+<h4 id="sec-3-2-3">Manual Inspection Criteria Reminder</h4>
+<div class="outline-text-4" id="text-3-2-3">
+<ul class="org-ul">
+<li>you need to use the methods, such as <code>cycle</code> and <code>getOpposite</code>,
+where appropriate. Don't re-implement their behavior anywhere else.
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3"><code>enum Spot implements Representable, Passable</code></h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+<code>enum Spot</code> implements <code>Representable</code> and <code>Passable</code>
+interfaces. (what methods will <code>Spot</code> have to implement as a
+consequence?)  Spots represent the permanent walls, spaces, and
+signage at a particular coordinate on a <code>Map</code>. Other things may be
+also present at a coordinate or not during the simulation, but the
+<code>Spot</code> is the actual wall, open spot, exit (also open in a sense), or
+sign (an open spot with an exit sign).
+</p>
+</div>
+<div id="outline-container-sec-3-3-1" class="outline-4">
+<h4 id="sec-3-3-1">Values</h4>
+<div class="outline-text-4" id="text-3-3-1">
+<ul class="org-ul">
+<li><code>Open</code>, <code>Wall</code>, <code>Exit</code>, <code>SignN</code>, <code>SignE</code>, <code>SignS</code>, <code>SignW</code>.
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-3-3-2" class="outline-4">
+<h4 id="sec-3-3-2">Fields</h4>
+<div class="outline-text-4" id="text-3-3-2">
+<p>
+You can add whatever fields you'd like beyond <code>String repr</code> in order
+to complete the required methods. If you do, they must either be
+<code>private</code> or be <code>public final</code>. It may be useful to use the following:
+<code>boolean lookThrough</code>, <code>boolean passThrough</code>, Direction <code>dir</code>.
+</p>
+<ul class="org-ul">
+<li><b>public final String repr</b>. Representation of the spot. The correct
+characters must be used (see <a href="#sec-1-2">Map Representations</a>).
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-3-3-3" class="outline-4">
+<h4 id="sec-3-3-3">Methods</h4>
+<div class="outline-text-4" id="text-3-3-3">
+<ul class="org-ul">
+<li><b>Spot( ??? )</b>. Constructor, intializes any fields you have. Luckily
+for testing purposes, we don't get to create extra values of your
+enumeration type, so it doesn't matter what exact signature your
+constructor has as long as the methods below are provided as
+expected.
+<ul class="org-ul">
+<li><b>Manual Inspection Criteria (5%)</b> : your constructor correctly
+initializes any and all fields your <code>Spot</code> enumeration contains.
+</li>
+</ul>
+</li>
+
+<li><b>public boolean isSign()</b>. Determines if the spot is one of our
+four <code>SignX</code> spot values.
+</li>
+<li><b>@Override public String toString()</b>. Uses the <code>repr</code> value as its result.
+</li>
+<li><b>@Override public String repr()</b>. Uses the <code>repr</code> value as its
+result.
+</li>
+<li><b>@Override public boolean canLookThrough()</b>. Answers if a person is
+able to look beyond this spot. It is <code>true</code> for all spots except
+<code>Wall</code>.
+</li>
+<li><b>@Override public boolean canPassThrough()</b>. Answers if a person is
+able to walk into/through this spot. It is <code>true</code> for all spots
+except <code>Wall</code>.
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Classes</h2>
+<div class="outline-text-2" id="text-4">
+</div><div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1">class Coord</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Our maps are represented in grid form, with each spot having a
+row/column coordinate. We store those numbers in a <code>Coord</code> object and
+provide some methods for convenient interaction.
+</p>
+</div>
+<div id="outline-container-sec-4-1-1" class="outline-4">
+<h4 id="sec-4-1-1">Fields</h4>
+<div class="outline-text-4" id="text-4-1-1">
+<ul class="org-ul">
+<li><b>public final int r, c</b>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-4-1-2" class="outline-4">
+<h4 id="sec-4-1-2">Methods</h4>
+<div class="outline-text-4" id="text-4-1-2">
+<ul class="org-ul">
+<li><b>public Coord (int r, int c)</b>. Constructor, assigns both fields.
+</li>
+<li><b>public Coord step(Direction d)</b>. What is the Coordinate one step
+in the given direction? Creates and returns this new <code>Coord</code>
+value. Note, it may or may not be on a particular <code>Map</code>. No error
+checking is performed here (we don't have access to the <code>Map</code> to
+check its dimensions).
+</li>
+<li><b>public Coord copy()</b>. Creates and returns a new <code>Coord</code> value with
+the same row/column representation as the current object.
+</li>
+<li><b>public boolean equals(Object o)</b>. Given another object, is it also
+a <code>Coord</code> with the same row and column values?
+</li>
+<li><b>public boolean adjacent(Coord other)</b>. Is the given <code>other</code>
+<code>Coord</code> exactly one spot away (<code>N</code>, <code>E</code>, <code>S</code>, <code>W</code>)? Only four
+locations can return <code>true</code>; all others (including the same
+location itself) would return <code>false</code>.
+</li>
+<li><b>public String toString()</b>. Representation of an <code>@</code> symbol and
+the row/column values in parentheses, like this example in row 2,
+column 3: "<code>@(2,3)</code>" .
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2">class Map</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+A <code>Map</code> represents all the spots and things in a simulation, and
+provides some support methods for them as well. You will likely need
+to create the enumerations, interfaces, and many of the <code>Thing</code>
+classes before you can pull them all together with the <code>Map</code> class.
+</p>
+</div>
+
+<div id="outline-container-sec-4-2-1" class="outline-4">
+<h4 id="sec-4-2-1">Fields</h4>
+<div class="outline-text-4" id="text-4-2-1">
+<ul class="org-ul">
+<li><b>protected Spot[][] floorplan</b>
+</li>
+<li><b>protected Thing[] things</b>
+</li>
+<li><b>protected java.io.PrintStream log</b>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2-2" class="outline-4">
+<h4 id="sec-4-2-2">Methods</h4>
+<div class="outline-text-4" id="text-4-2-2">
+<ul class="org-ul">
+<li><b>Map(String filename, PrintStream log)</b>. Reads the given file to
+construct a map and all spots/things on it. Any messages (such as
+safety or death messages) from this map will be sent to <code>log</code>.
+<ul class="org-ul">
+<li>any "map file" that is named in the first argument ("<code>String
+     filename</code>") is assumed to have the same number of characters in
+each line, each line ends with a "<code>\n</code>" character, and each
+character is assumed to be one of our valid characters (see <a href="#sec-1-2">Map Representations</a>). If any of these assumptions is invalidated, or
+the file doesn't even exist, your program does not need to
+function (behavior is undefined). You may add <code>throws
+     IOException</code> to your method signature as necessary.
+</li>
+<li><b>Manual Inspection Criteria (5%)</b> : Well documented, elegant
+solution to reading the map text files. (See more details in the
+grading section of this project specification).
+</li>
+</ul>
+</li>
+<li><b>public boolean onMap(Coord c)</b>. Answers if the given <code>Coord</code> is on
+this <code>Map</code>.
+</li>
+<li><b>public Spot spotAt(Coord c)</b>. Returns the <code>Spot</code> at the given
+<code>Coord</code>, if present (from the <code>floorplan</code>). If the <code>Coord</code> isn't on
+the map, this method will return <code>null</code>.
+</li>
+<li><b>public int peopleRemaining()</b>. Returns how many people are still
+trying to escape. <code>Status.Safe</code> and <code>Status.Dead</code> people don't
+count, but <code>Status.Escaping</code> people do get counted. Threats don't
+count either, of course.
+</li>
+<li><b>public void addThing(Thing a)</b>. Occasionally new things should be
+added (usually these are threats that have spawned more spots of
+sticky or smoke). Accept a new <code>Thing</code> (assumed to be on the map),
+and cause the <code>things</code> field to be one spot longer, with this new
+one at the end. Remember, arrays can't change length. How will you
+get around this? (you can't change the type of the field)
+<ul class="org-ul">
+<li><b>Manual Inspection Criteria (5%)</b> : well-documented description
+of your approach to dealing with growing arrays (and a matching
+implementation).
+</li>
+</ul>
+</li>
+<li><b>public Thing[] thingsAt(Coord c)</b>. Return an array of all <code>Thing</code>
+values found at the given coordinate. Preserve the order of
+original appearance. If <code>c</code> isn't on the map, or no <code>Thing</code> is
+there, an empty array is returned.
+</li>
+<li><b>public boolean canLookThroughLocation(Coord c)</b>. Considering the
+spot and all things on that spot, can a person look through this
+location? If <code>c</code> isn't on the map, <code>false</code> is returned.
+</li>
+<li><b>public boolean canPassThroughLocation(Coord c)</b>. Considering the
+spots and all things on that spot, can a person pass through this
+location? If <code>c</code> isn't on the map, <code>false</code> is returned.
+</li>
+<li><b>public void iterate()</b>. For all <code>Thing</code> items we saw in their
+original order of discovery/spawning, allow them to perform an
+action by calling their <code>doAction()</code> method. This may alter the map
+by changing <code>Thing</code> positions or adding new <code>Things</code>.
+<ul class="org-ul">
+<li>after allowing all things to make their moves, the message
+"<code>map:</code>" must be sent to <code>log</code>, and then this map's <code>toString()</code>
+representation must also be sent to the <code>log</code>.
+</li>
+<li>if a <code>StickyIcky</code> is spawned into a spot containing people, it
+immediately kills them; it doesn't need to wait for the next
+iteration. Note, this doesn't count as taking an action (do not
+call <code>doAction</code> on the spawned threat).
+</li>
+</ul>
+</li>
+<li><b>@Override public String toString()</b>. Returns a <code>String</code> that
+represents one entity per location. When more than one thing exists
+at a location, here is the order of preference (higher in the list
+is chosen):
+<ul class="org-ul">
+<li>Wall
+</li>
+<li>Smoke
+</li>
+<li>StickyIcky
+</li>
+<li>any Person (prefer the <b>last</b> in the map's <code>things</code> array)
+</li>
+<li>Exit, Open, or Sign spots (any direction)
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-4-3" class="outline-3">
+<h3 id="sec-4-3">class Panic</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+This is the main class. The name of the game is <code>Panic!</code>
+</p>
+</div>
+
+<div id="outline-container-sec-4-3-1" class="outline-4">
+<h4 id="sec-4-3-1">Methods</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<ul class="org-ul">
+<li><b>public static void main(String[] args)</b>.
+<ul class="org-ul">
+<li>We will actually use the <code>args</code> now. We're expecting one or two
+arguments, which can be supplied when you invoke the program in
+one of these two ways:
+<pre class="example">
+java Panic "samples/mapfile.txt"
+</pre>
+<p>
+or, 
+</p>
+<pre class="example">
+java Panic "samples/mapfile.txt" "samples/outputs.txt"
+</pre>
+<ul class="org-ul">
+<li>The first argument must be present, and must be a filename of a
+map to read.
+</li>
+<li>The second argument might be present, describing the "logger" -
+this is where we will send messages describing what's happening
+on the map. If this argument is present, it is the name of a
+file that should be opened and all log messages written to it,
+and then closed. (Any file previously present with that name is
+overwritten, not appended). If there is no second argument,
+then <code>System.out</code> must be used by default, and all logging
+messages will show up on the console (this is convenient to use
+during development).
+</li>
+<li><i>Note</i>: We should use the <code>PrintStream</code> constructor,
+<code>PrintStream(File)</code>, when preparing <code>log</code> to write to a
+file. Why did we use <code>PrintStream</code> as the type of <code>log</code>, and
+not the more fashionable <code>PrintWriter</code> (which handles different
+encodings better)?  Because we wanted to allow either writing
+to the console (via <code>PrintStream System.out</code>, stuck in the old
+Java 1.0 mindset) or to an arbitrary file (perhaps via a
+<code>PrintWriter</code>), we needed a common type to be used in either
+situation. We might find that the newer <code>PrintWriter</code> has a
+constructor that accepts an <code>OutputStream</code> (ancestor to
+<code>PrintStream</code>), which seems promising - but creating a
+<code>PrintWriter</code> based on <code>System.out</code> causes competition for the
+console, between <code>System.out</code> and your <code>PrintWriter
+       log</code>. Competition for these sorts of resources is
+problematic. This is also why you should never create multiple
+scanners that read from the same source (such as <code>System.in</code> or
+a particular <code>File</code> object), and instead you should create one
+and pass it around as an argument. So for this assignment, we
+chose instead to use <code>PrintStream</code>, which contains the
+constructor <code>PrintStream(File)</code>.
+</li>
+</ul>
+</li>
+<li>Once we understand what map file to read (1st argument) and where
+to write log messages (2nd argument), this method will create a
+<code>Map</code> object. To start the simulation, we send messages to the
+logger including both the 'begin' message, a listing of any
+<code>things</code> at their locations (two included in this example), and
+the current map:
+<pre class="example">
+begin simulation
+f@(2,3)
+s@(2,5)
+</pre>
+</li>
+<li>Repeatedly, we print a message indicating the iteration number
+(starting at zero), and ask the map to <code>iterate()</code> once through
+all its <code>things</code>. Each successive line would show during a
+simulation, with many other lines between them of course:
+<pre class="example">
+iteration 0
+</pre>
+
+<pre class="example">
+iteration 1
+</pre>
+
+<pre class="example">
+iteration 2
+</pre>
+<p>
+&#x2026;
+</p>
+</li>
+<li>when no escaping people remain (all are safe or dead), the
+simulation is over, and we send the message:
+<pre class="example">
+end simulation
+</pre>
+</li>
+<li>If it refers to a file, <code>close()</code> the <code>log</code> before
+returning. (You shouldn't close the <code>log</code> if it is actually
+<code>System.out</code>!)
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-4" class="outline-3">
+<h3 id="sec-4-4">class Thing</h3>
+<div class="outline-text-3" id="text-4-4">
+<pre class="example">
+public abstract class Thing implements Representable,Passable
+</pre>
+<p>
+<code>Thing</code> encompasses both persons and threats. This <code>abstract</code> class
+implements both <code>Representable</code> and <code>Passable</code> (though it relegates
+all methods from <code>Passable</code> to child classes).
+</p>
+</div>
+
+<div id="outline-container-sec-4-4-1" class="outline-4">
+<h4 id="sec-4-4-1">Manual Inspection Criteria Reminder</h4>
+<div class="outline-text-4" id="text-4-4-1">
+<ul class="org-ul">
+<li>For this class and its child classes, you need to use the provided
+(public) methods defined here when you can, rather than re-visiting
+the internal state. As an example, <code>Thing::getLoc()</code>,
+<code>Thing::setLoc()</code>, and <code>Person::isSafe()</code> should be used when they
+can rather than trying to re-invent the same computation.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4-4-2" class="outline-4">
+<h4 id="sec-4-4-2">Fields</h4>
+<div class="outline-text-4" id="text-4-4-2">
+<ul class="org-ul">
+<li><b>private Coord loc, prevLoc</b>
+</li>
+<li><b>public final String repr</b>
+</li>
+<li><b>protected java.io.PrintStream log</b>
+</li>
+<li><b>protected Map map</b>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4-4-3" class="outline-4">
+<h4 id="sec-4-4-3">Methods</h4>
+<div class="outline-text-4" id="text-4-4-3">
+<ul class="org-ul">
+<li><b>public Thing(Coord c, String repr, Map map, PrintStream
+log)</b>. Initializes the fields. Both <code>loc</code> and <code>prevLoc</code> are set to
+the given coordinate <code>c</code>. (This is the only time they'll match).
+</li>
+
+<li><b>public abstract void doAction()</b>. All things can do an
+action. People might move, and threats might spawn or kill. This
+will be overridden lower in the class hierarchy.
+</li>
+
+<li><b>public Coord getLoc()</b>. Returns the <code>loc</code>.
+</li>
+<li><b>public Coord getPrevLoc()</b>. Returns the <code>prevLoc</code>.
+</li>
+<li><b>public void setLoc(Coord c)</b>. Updates both <code>prevLoc</code> and <code>loc</code>
+   appropriately.
+</li>
+
+<li><b>@Override public String repr()</b>. Returns the field.
+</li>
+<li><b>@Override public String toString()</b>. Returns the concatenation of
+<code>repr()</code> and <code>getLoc()</code>.
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-4-5" class="outline-3">
+<h3 id="sec-4-5">class Threat</h3>
+<div class="outline-text-3" id="text-4-5">
+<pre class="example">
+public abstract class Threat extends Thing
+</pre>
+
+<p>
+<code>Threat</code> is an abstract class that extends <code>Thing</code>. Threats are the
+bad things from which people are trying to escape. They spread (spawn)
+at regular intervals; we store how long it's been since the last
+spawning (via <code>charge</code>), and also at what point they will again spawn
+(via <code>fullCharge</code>).
+</p>
+
+<p>
+<b>Manual Inspection Criteria (2%)</b> : <code>Threat</code> houses most of teh code
+related to increasing/resetting charge, and spawning potentially four
+children in four new locations. Child classes only define the
+specifics of spawning and any special additional actions during
+<code>doAction()</code>.
+</p>
+</div>
+
+<div id="outline-container-sec-4-5-1" class="outline-4">
+<h4 id="sec-4-5-1">Fields</h4>
+<div class="outline-text-4" id="text-4-5-1">
+<ul class="org-ul">
+<li><b>protected int charge</b>
+</li>
+<li><b>protected final int fullCharge</b>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-4-5-2" class="outline-4">
+<h4 id="sec-4-5-2">Methods</h4>
+<div class="outline-text-4" id="text-4-5-2">
+<ul class="org-ul">
+<li><b>public Threat(Coord c, String repr, int fullCharge, Map map,
+PrintStream log)</b>. Initializes the fields. <code>charge</code> starts at <code>0</code>.
+</li>
+<li><b>public abstract void spawn(Coord c)</b>. Child classes will provide
+an implementation that spawns (creates) a new thing identical to
+itself, but at the given <code>c</code> location. During the <code>spawn()</code> method,
+a child places a copy of the new object on the map and carries out
+any further actions such eliminating unfortunate humans in their
+path. (do not call <code>doAction</code> here, only actions such as a
+<code>StickyIcky</code> immediately killing present people will occur).
+</li>
+<li><b>@Override public void doAction()</b>. First action is to increment
+<code>charge</code>. If it reaches <code>fullCharge</code>, it's time to spawn! When at
+full charge, take the following actions.
+<ul class="org-ul">
+<li>Log a message of the form
+<pre class="example">
+s@(1,8) spreading
+</pre>
+<p>
+which indicates the type and location of the threat that is
+spreading/spawning. (Smokes also can spread; <code>~@(1,8) spreading</code>
+also appropriate).
+</p>
+</li>
+<li>Call the <code>spawn(c)</code> with a <code>Coord</code> for all four cardinal
+directions (north, east, south, west) from the spawning threat.  
+</li>
+<li>Only call <code>spawn(c)</code> if the spot <code>canPassThrough()</code> which is true
+for non-wall spots.
+</li>
+<li>reset <code>charge</code> to zero.
+</li>
+</ul>
+</li>
+<li><i>Note:</i> <code>Threat</code> doesn't provide implementations for any methods from
+<code>Passable</code>, so those are still the child classes' responsibilities.
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-6" class="outline-3">
+<h3 id="sec-4-6">class StickyIcky</h3>
+<div class="outline-text-3" id="text-4-6">
+<pre class="example">
+public class StickyIcky extends Threat
+</pre>
+<p>
+It has no fields, but has a constructor and overrides various abstract
+methods it inherited, in order to be concrete.
+</p>
+</div>
+<div id="outline-container-sec-4-6-1" class="outline-4">
+<h4 id="sec-4-6-1">Methods</h4>
+<div class="outline-text-4" id="text-4-6-1">
+<ul class="org-ul">
+<li><b>public StickyIcky(Coord loc, Map map, PrintStream log)</b>. Via the
+parent constructor, sets all fields. <code>fullcharge</code> must always be
+<code>4</code>, and the starting value for <code>charge</code> is <code>0</code>.
+</li>
+<li><b>@Override public void spawn(Coord c)</b>. Creates a new <code>StickyIcky</code>
+and adds it to the map at location <code>c</code>. The following
+considerations should be made
+<ul class="org-ul">
+<li>Do not spawn a new sticky in a location that already has one. This will require checking that there is no StickyIcky at the
+coordinate <code>c</code>.
+</li>
+<li>Generate a log message of the form
+<pre class="example">
+s@(1,7) spawned
+</pre>
+<p>
+where the location is the position of the new sticky.
+</p>
+</li>
+<li>Any <code>Person</code> at the new spawn location is eliminated.  When
+killing humans, call their <code>die()</code> method. Also generate a log
+message of the following form
+<pre class="example">
+s@(1,7) killed w@(1,7)
+</pre>
+</li>
+</ul>
+</li>
+<li><b>@Override public void doAction()</b>. After calling the version of
+<code>doAction</code> inherited from <code>Threat</code>, this <code>StickyIcky</code> object will
+check what non-dead persons are present at its location on the map,
+and kills them (calls their <code>die()</code> method). Since multiple people
+may be present, mulitple deaths may occur. Whenever a person is
+killed, a message must be sent to the log, utilizing <code>toString()</code>
+definitions. Example:
+<pre class="example">
+s@(4,5) killed a@(4,5)
+</pre>
+</li>
+<li><b>@Override public boolean canLookThrough()</b>. People can actually
+look through a spot containing a <code>StickyIcky</code>; it doesn't obscure
+the whole view like a <code>Wall</code> does.
+</li>
+<li><b>@Override public boolean canPassThrough()</b>. Return <code>true</code> here.  A
+<code>Person</code> can attempt to pass through a StickyIcky but it will
+result in death.
+</li>
+<li><b>Suggestion</b>: In several places, <code>StickyIckys</code> must kill all humans
+at their location (during <code>spawn()</code> and <code>doAction()</code>. This suggests
+a private method to kill all humans at the sticky's location is
+useful. Such a method might help with part of the manual inspection
+criteria.
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-7" class="outline-3">
+<h3 id="sec-4-7">class Smoke</h3>
+<div class="outline-text-3" id="text-4-7">
+<pre class="example">
+public class Smoke extends Threat
+</pre>
+<p>
+It has no fields, but has a constructor and overrides a few abstract
+methods it inherited, in order to be concrete.
+</p>
+</div>
+<div id="outline-container-sec-4-7-1" class="outline-4">
+<h4 id="sec-4-7-1">Methods</h4>
+<div class="outline-text-4" id="text-4-7-1">
+<ul class="org-ul">
+<li><b>public Smoke(Coord c, Map map, PrintStream log)</b>. Via the parent
+constructor, initializes all fields. <code>fullCharge</code> must be set to
+<code>2</code>, and again <code>charge</code> starts at <code>0</code>.
+</li>
+<li><b>@Override public void spawn(Coord c)</b>. Creates a new <code>Smoke</code> object
+and adds it to the map at location <code>c</code>. Do not add a <code>Smoke</code> at a
+location that already has a <code>Smoke</code> present.
+<ul class="org-ul">
+<li>When adding a new <code>Smoke</code> object to the map, generate a log
+message of the form
+<pre class="example">
+~@(1,7) spawned
+</pre>
+<p>
+where the location is the position of the new smoke.
+</p>
+</li>
+</ul>
+</li>
+<li><i>Note:</i> smokes can't directly kill anyone, so there is nothing extra
+to add to <code>doAction</code>; rely upon the inherited version.
+</li>
+<li><b>@Override public boolean canLookThrough()</b>. People can't look through smoke.
+</li>
+<li><b>@Override public boolean canPassThrough()</b>. People can walk through
+smoke. It's scary, though, because there may be a sticky there! It's a trap!
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4-8" class="outline-3">
+<h3 id="sec-4-8">class Person</h3>
+<div class="outline-text-3" id="text-4-8">
+<pre class="example">
+public abstract class Person extends Thing
+</pre>
+<p>
+People all want to escape the <code>Map</code> (by seeking an <code>Exit</code> spot), but
+will use different algorithms to do so - perhaps always running away
+from the worst threats visible, or obediently following exit signs, or
+perhaps just arbitrarily spiralling out clockwise. Details all those
+different approaches should share are collected into this class.
+</p>
+
+<p>
+<b>Manual Inspection Criteria (3%)</b> : child classes of Person rely on
+all inherited definitions that can be, and only override those that
+must be.
+</p>
+</div>
+
+<div id="outline-container-sec-4-8-1" class="outline-4">
+<h4 id="sec-4-8-1">Fields</h4>
+<div class="outline-text-4" id="text-4-8-1">
+<ul class="org-ul">
+<li><b>protected Direction facing</b>
+</li>
+<li><b>protected Status status</b>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4-8-2" class="outline-4">
+<h4 id="sec-4-8-2">Methods</h4>
+<div class="outline-text-4" id="text-4-8-2">
+<ul class="org-ul">
+<li><b>public Person (Coord loc, String repr, Map map, PrintStream
+log)</b>. Via the parent constructor, initializes all fields. <span class="underline">Persons
+always start facing North</span>.
+</li>
+
+<li><b>public abstract Coord chooseMove()</b>. Child classes must provide
+their own implementation of how to choose the next move (what
+adjacent spot to go to next). This will be immediately used by this
+class's <code>doAction</code> method (see below).
+</li>
+
+<li><b>@Override public void doAction()</b>. Child classes will provide a
+way to choose where to move next via <code>chooseMove()</code>, so we can use
+that implementation to get the desired move, and then if it's
+adjacent to our current position and we are allowed to move to that
+part of the map, we will <code>setLoc(..)</code> to the new position.
+</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><b>public boolean isSafe()</b>. Is this person's status <code>Safe</code>?
+</li>
+<li><b>public void die()</b>. Change the status of the person to dead.
+</li>
+
+<li><b>@Override public void setLoc(Coord newLoc)</b>. Via the inherited
+version of <code>setLoc(..)</code>, we must also update our <code>Status</code> to <code>Safe</code>
+if we are landing on a <code>Spot.Exit</code>. When this occurs, we must send
+a message to the <code>log</code>, such as this example:
+<pre class="example">
+a@(4,5) safe
+</pre>
+</li>
+
+<li><b>@Override public boolean canLookThrough()</b>. People can look past
+other people.
+</li>
+<li><b>@Override public boolean canPassThrough()</b>. People can walk past
+other people.
+</li>
+
+<li><i>Note:</i> you may want to add more common methods here, in <code>Person</code>,
+to aid the various kinds of people's decision-making in choosing a
+move (when the child classes implement <code>chooseMove()</code>). Some
+candidates could be:
+<ul class="org-ul">
+<li>looking in one direction for a specific kind of threat, or any
+threat in general
+</li>
+<li>looking in one direction to determine if there's an immediate
+wall, a bit of hallway, an exit, or if the direction's contents
+are unknown.
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-4-9" class="outline-3">
+<h3 id="sec-4-9">class Weirdo</h3>
+<div class="outline-text-3" id="text-4-9">
+<pre class="example">
+public class Weirdo extends Person
+</pre>
+
+<p>
+There are no fields, just a constructor and an implementation of
+<code>chooseMove</code>. Weirdos can't turn left!  They will walk into any
+open spot in their current direction until hitting a wall (or finding
+that a sticky is visible in that next spot forward, and not going
+there), and then will turn to the right until a spot is found where
+they can move. Weirdos won't step onto a sticky they can see, but
+would walk all the way up to a sticky before realizing they should turn
+right and seek other paths.  Since we aren't allowing ourselves to go
+to our previous spot, this could be our downfall. If they are walking
+into smoke, they might accidentally walk directly onto a <code>StickyIcky</code>.
+</p>
+</div>
+
+<div id="outline-container-sec-4-9-1" class="outline-4">
+<h4 id="sec-4-9-1">Methods</h4>
+<div class="outline-text-4" id="text-4-9-1">
+<ul class="org-ul">
+<li><b>public Weirdo(Coord c, Map map, PrintStream log)</b>. Via the
+parent constructor, insantiates all fields. The <code>repr</code> for
+<code>Weirdo</code> is "<code>w</code>".
+</li>
+<li><b>@Override public Coord chooseMove()</b>.
+<ul class="org-ul">
+<li>Every time you move, you must send a message formatted as the
+following (with correct representation, location, and direction
+moved):
+<pre class="example">
+w@(1,4) moving W
+</pre>
+</li>
+<li>Enforce these rules:
+<ul class="org-ul">
+<li>never go to your previous location, ever.
+</li>
+<li>if you're safe or dead, stay put. (No message is sent)
+</li>
+<li>if you can go forwards without knowingly landing on a sticky, do
+so.
+</li>
+<li>if you can't go forward, keep turning right looking for another
+direction where you can go at least one step forward. Step in
+the first viable direction you find (if such a direction is
+present).
+</li>
+<li>if all directions aren't possible, stay put and await your
+fate. Due to our rule that we never go to our previous
+location, this might happen more than we'd prefer. :( When you
+are still of status <code>Status.Escaping</code>, but not moving, you must
+send a message worded like this:
+<pre class="example">
+w@(1,7) staying here
+</pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-4-10" class="outline-3">
+<h3 id="sec-4-10">class Follower</h3>
+<div class="outline-text-3" id="text-4-10">
+<pre class="example">
+public class Follower extends Person
+</pre>
+<p>
+Followers have a slightly smarter approach to escaping than
+Weirdos.
+</p>
+<ul class="org-ul">
+<li>They search for exits and signs to follow towards exits.
+</li>
+<li>Signs and exits can be "seen" if they are directly
+north/east/south/west of the Follower and no spot in between blocks
+the view of the Follower.
+</li>
+<li>Unfortunately as their attention is fixed on finding signs/exits, a
+Follower <b>will</b> step directly onto a sticky.
+</li>
+</ul>
+
+<p>
+Here are of some examples with descriptions. Each is a separate
+starting point (they aren't consecutive iterations). Many of these
+maps appear in the samples along with the full output of the
+simulation behavior.
+</p>
+<div class="org-src-container">
+
+<pre class="src src-text">|||||||
+|....e|
+|f...^|
+|||||||
+Sees the North (^) sign, not the exit; will walk towards the sign then
+set facing to North. 
+
+|||||||
+|f...e|
+|....^|
+|||||||
+Sees the exit, not the North (^) sign. Will walk towards exit.
+
+|||||||
+|.e...|
+|.....|
+|.f..^|
+|||||||
+Sees the exit and the North (^) sign, will prefer to move towards the exit
+
+|||||||
+|.e...|
+|f....|
+|....^|
+|||||||
+Does not see either exit or sign as they are not directly N/E/S/W;
+will walk in current facing direction. (people start facing N, by the way).
+
+|||||||
+|.e...|
+|.~...|
+|.f..^|
+|||||||
+Can't see the exit due to the smoke
+Sees the North (^) sign and will move towards it then turn North
+
+|||||||
+|.e...|
+|.g...|
+|.f..^|
+|||||||
+Sees the exit beyond the sticky and will move towards the exit and step
+into the sticky
+
+|||||||
+|.e...|
+|.~...|
+|.....|
+|.f.~^|
+|||||||
+Can't see the exit or sign due to the smoke
+Will move in the current facing direction
+
+||||||||
+|ef...e|
+||||||||
+Initial facing is North. Two exits, will prefer the one that appears
+first on looking North, East, South, West; will head towards the right
+exit
+
+||||||
+|f...|
+|.e..|
+|....|
+|e...|
+||||||
+Sees lower left exit first and will head towards it. Facing becomes
+South so will skip the closer exit on the way there.
+</pre>
+</div>
+</div>
+
+
+<div id="outline-container-sec-4-10-1" class="outline-4">
+<h4 id="sec-4-10-1">Methods</h4>
+<div class="outline-text-4" id="text-4-10-1">
+<p>
+There are no fields, just a constructor and an implementation of
+<code>chooseMove</code>.
+</p>
+
+<ul class="org-ul">
+<li><b>public Follower (Coord c, Map map, PrintStream log)</b>. Via the
+parent constructor, initializes all fields. The <code>repr</code> for a
+<code>Follower</code> is "<code>f</code>".
+</li>
+<li><b>@Override public Coord chooseMove()</b>.
+<ul class="org-ul">
+<li>Every time you move, you must send a message formatted like this:
+<pre class="example">
+f@(1,4) moving W
+</pre>
+</li>
+<li>You must enforce these rules in choosing the next move. When we
+must consider multiple directions with similar situations, we
+always check each possibility in clockwise order, starting with
+the current <code>facing</code> direction.
+<ul class="org-ul">
+<li>never go to your previous location, ever.
+</li>
+<li>if you're safe, stay in place.
+</li>
+<li>if an exit is seen, go towards it.  
+</li>
+<li>if standing under a sign, step in the direction that sign is
+pointing
+</li>
+<li>if a sign is visible and indicates you should go forward or
+backward (based on your current facing direction), go the
+indicated direction if you can.
+</li>
+<li>if a sign is visible and indicates you should go to it and turn,
+go towards the sign.
+</li>
+<li>if no signs are visible where you are, go the first available
+direction (regardless of sticky or smoke)
+</li>
+<li>if no options remain, stay put and away your fate. :( In this
+case, you must send a message worded like this:
+<pre class="example">
+f@(2,4) staying here
+</pre>
+</li>
+</ul>
+</li>
+<li><b>Manual Inspection Criteria (10%)</b> : Summarize your decision
+structure in a comment as pseudocode at the top of <code>chooseMove</code>;
+comment throughout the method what part of your pseudocode is
+happening. Use helper methods as necessary, aiming for no more
+than 100 lines in your actual <code>chooseMove()</code> method
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Grading</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+As before, 50% of your grade will be determined by automated tests
+while the other 50% will be according to a manual inspection.
+</p>
+</div>
+
+<div id="outline-container-sec-6-1" class="outline-3">
+<h3 id="sec-6-1">Automated Tests (50%)</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+As usual, 50% of your grade is based on what fraction of the provided
+test cases you pass. You can run them mostly per-class, or test
+everything via the <code>P3Tests.java</code> file. If you turn in code that
+doesn't run, you realistically may receive zero credit for this
+portion of the project. Keep your code compilable and testable.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-6-2" class="outline-3">
+<h3 id="sec-6-2">Manual Inspection (50%)</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+The following features will be evaluated during manual inspection of
+your code and analysis documents.  It is worth a total of 50% of the
+overall grade for this project. Where appropriate, we've tried to
+mention these details inlined in the specification above as well.
+</p>
+</div>
+
+<div id="outline-container-sec-6-2-1" class="outline-4">
+<h4 id="sec-6-2-1">(5%) Correct Project Setup</h4>
+<div class="outline-text-4" id="text-6-2-1">
+<ul class="org-ul">
+<li>Create a folder with our naming convention, e.g.:
+<pre class="example">
+LabNum_NetID_P3/
+</pre>
+</li>
+<li>Place all <i>your</i> <code>.java</code> files directly in this folder.
+</li>
+<li>remove all <code>.class</code>, temporary, and testing-related files.
+</li>
+<li>include your same <code>ID.txt</code> file as last time. Example:
+<div class="org-src-container">
+
+<pre class="src src-sh">Michael Neary
+mpneary
+G10100101
+Lecture: 2__
+Lab: 2BX
+</pre>
+</div>
+</li>
+<li>zip that folder, and turn it in to the correct place on Blackboard.
+</li>
+<li>ensure you turned in the correct files!
+</li>
+<li>submit as many times as needed. After ignoring any attempts that
+are &gt;=48 hours post-deadline, we automatically grade your latest
+attempt, and use its timestamp to determine whether any
+tokens/penalties are assessed.
+</li>
+</ul>
+
+<p>
+Points are earned by following these conventions, and by your code
+being compilable when we copy in a fresh copy of the testing files and
+use the usual (provided) testing commands. Points are lost when things
+must be deleted or renamed or relocated in order to begin compiling
+and grading your work.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-6-2-2" class="outline-4">
+<h4 id="sec-6-2-2">(10%) Coding Style and Readability</h4>
+<div class="outline-text-4" id="text-6-2-2">
+<p>
+This is a larger project. It will require discipline and effort to
+keep track of how all the pieces fit together.  Commenting your own
+code to keep track of the purpose of fields and methods will pay much
+higher dividends in this project than was previously the case.  Your
+code will be inspected for clarity in the following categories.
+</p>
+
+<p>
+<b>Use JavaDoc Comments Throughout the Project.</b> At a minimum, use these
+annotations where appropriate: <code>@param</code>, <code>@return</code>.
+</p>
+
+<dl class="org-dl">
+<dt> Code Cleanliness (3%) </dt><dd>Indent and {bracket} code uniformly
+throughout the program to improve readability.
+</dd>
+
+<dt> Class Documentation (2%) </dt><dd>Each class has an initial (javadoc)
+comment indicating its intended purpose, how it works, and how
+it relates or uses other classes in the project.
+</dd>
+
+<dt> Field Documentation (2%) </dt><dd>Each field of a class is documented
+(javadoc comments) to indicate what piece of data is tracked and
+how it will be used, regardless of visibility.
+</dd>
+
+<dt> Method documentation (3%) </dt><dd>Each method has a short (javadoc
+comment) description indicating its intended purpose and how it
+gets its job done. (These are also needed for your own helper
+methods you choose to add).
+</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-sec-6-2-3" class="outline-4">
+<h4 id="sec-6-2-3">(5%) Adherence to Abstraction Barriers</h4>
+<div class="outline-text-4" id="text-6-2-3">
+<p>
+The purpose of designing a system with multiple classes and
+visible/public methods is to ensure that the internal design of a
+class can change without the need to change other classes which use
+it.  For that purpose, it is important to use classes appropriately
+through their public methods as much as possible. Your implementation
+will be evaluated according to the following.
+</p>
+<ul class="org-ul">
+<li>Public methods are used on objects when their internal state is not
+required: <code>Thing.getLoc(), Thing.setLoc(), Person.isSafe()</code> and the
+<code>repr()</code> method are all examples of this but not the only ones.
+</li>
+<li>Methods of the <code>Direction</code> enumeration are used to <code>cycle()</code> through
+and <code>getOpposite()</code> directions when a <code>Person</code> is determining their
+moves.  Hand-coded loops that replicate the business of these
+methods will lose credit.
+</li>
+<li>Methods such as <code>canLookThrough()</code> and <code>canPassThrough()</code> are used
+rather than checking for individual types of objects. (If you find
+yourself using <code>isntanceof</code> anywhere, get suspicious and try to
+remove them!)
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-6-2-4" class="outline-4">
+<h4 id="sec-6-2-4">(5%) Enumerations</h4>
+<div class="outline-text-4" id="text-6-2-4">
+<ul class="org-ul">
+<li>Ensure each enumeration is defined correctly with the specified
+number of elements in it.
+</li>
+<li>The <code>Spot</code> enumeration is more complex than others and likely
+requires fields for each element. Document these and set the up
+correctly. Ensure these fields are either <code>private</code> or <code>public
+  final</code> as appropriate.
+</li>
+<li>Due to the state associated with each <code>Spot</code>, defining a constructor
+that initializes each element is an elegant and required way to set
+up the enumeration.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-6-2-5" class="outline-4">
+<h4 id="sec-6-2-5">(5%) Map File Input Elegance</h4>
+<div class="outline-text-4" id="text-6-2-5">
+<p>
+Reading map text files and building the map objects is a non-trivial
+task.  Your approach in the <code>Map()</code> constructor will be assessed as
+follows.
+</p>
+<ul class="org-ul">
+<li>You must give a short comment description of the general approach:
+two-pass reading to count required items and sizes, one-pass with
+dynamic allocation, use of special classes such as <code>ArrayList</code>
+(which is allowed during your implementation, but you cannot change
+the types of anything specified in this project).
+</li>
+<li>The structure of the code clearly reflects the description given.
+</li>
+<li>Comments and good variable names indicate what is happening at each
+step. 
+</li>
+<li>Helper methods are used as appropriate to handle any complex
+subtasks which arise.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-6-2-6" class="outline-4">
+<h4 id="sec-6-2-6">(5%) Map <code>addThing()</code>: Dealing with Growing Arrays</h4>
+<div class="outline-text-4" id="text-6-2-6">
+<p>
+Maps must occasionally <code>addThing(t)</code> which is irritating but
+manageable with plain arrays. Include comments above <code>Map.addThing()</code>
+describing your strategy in the method and <code>Map</code> class to support the
+addition of new things. Make sure your code reflects your
+description. This is mostly about documenting and following through
+with an approach more than the particular approach, as long as it's
+reasonable.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-6-2-7" class="outline-4">
+<h4 id="sec-6-2-7">(3%) Proper use of Inherited Methods in Person</h4>
+<div class="outline-text-4" id="text-6-2-7">
+<p>
+The <code>Person</code> parent class provides many methods that are common to
+child classes and do not require overloading. Full credit will be given
+here if <code>Follower/Weirdo</code> properly leverage inherited
+methods and limit their overrides to only what is necessary.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-6-2-8" class="outline-4">
+<h4 id="sec-6-2-8">(2%) Proper use of Inherited Methods in Threat</h4>
+<div class="outline-text-4" id="text-6-2-8">
+<p>
+<code>Threat</code> should house most of the code related to increasing charge,
+resetting charge, and spawning potentially 4 children in four new
+locations as this is a common element to all <code>Threats</code>. Child class
+should only need to define the specifics of spawning (no duplicates of
+self in adjacent spots) and any special additional actions it takes
+during <code>doAction()</code> such as killing humans.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-6-2-9" class="outline-4">
+<h4 id="sec-6-2-9">(10%) <code>Follower.chooseMove()</code> Implementation</h4>
+<div class="outline-text-4" id="text-6-2-9">
+<p>
+A <code>Follower</code> has a reasonably complex set of choices to make about
+where to move. This can lead to snarly code. 
+</p>
+<ul class="org-ul">
+<li>Summarize the decision structure of the follower in a comment at the
+top of <code>chooseMove()</code>. This is the pseudocode plan which should be
+reflected in your code.
+</li>
+<li>Include comments indicating at each point in the method indicating
+what part of the decision structure is being computed.
+</li>
+<li>Define and use helper methods if common repetitive tasks arise. 
+</li>
+<li>Strive for shortness: if your implementation is excessively long
+(more than 100 lines), work to reduce its length. Utilize private
+helper methods with descriptive names to achieve shortness and
+understandability. 
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+</body>
+</html>

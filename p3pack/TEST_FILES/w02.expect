@@ -1,0 +1,29 @@
+begin simulation
+w@(1,4)
+||||||
+|e..w|
+||||||
+
+iteration 0
+w@(1,4) moving W
+map:
+||||||
+|e.w.|
+||||||
+
+iteration 1
+w@(1,3) moving W
+map:
+||||||
+|ew..|
+||||||
+
+iteration 2
+w@(1,2) moving W
+w@(1,1) safe
+map:
+||||||
+|w...|
+||||||
+
+end simulation

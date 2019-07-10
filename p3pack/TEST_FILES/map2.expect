@@ -1,0 +1,604 @@
+begin simulation
+w@(1,2)
+s@(1,6)
+s@(1,7)
+~@(3,5)
+f@(4,7)
+||||||||||
+||w...ss||
+|||||.|.||
+|.v..~.<||
+||.||||f||
+||e|||||||
+
+iteration 0
+w@(1,2) moving E
+f@(4,7) moving N
+map:
+||||||||||
+||.w..ss||
+|||||.|.||
+|.v..~.f||
+||.||||.||
+||e|||||||
+
+iteration 1
+w@(1,3) moving E
+~@(3,5) spreading
+~@(2,5) spawned
+~@(3,6) spawned
+~@(3,4) spawned
+f@(3,7) moving W
+map:
+||||||||||
+||..w.ss||
+|||||~|.||
+|.v.~~~<||
+||.||||.||
+||e|||||||
+
+iteration 2
+w@(1,4) moving E
+f@(3,6) moving W
+map:
+||||||||||
+||...wss||
+|||||~|.||
+|.v.~~~<||
+||.||||.||
+||e|||||||
+
+iteration 3
+w@(1,5) moving S
+s@(1,6) spreading
+s@(1,5) spawned
+s@(1,7) spreading
+s@(2,7) spawned
+~@(3,5) spreading
+f@(3,5) moving W
+~@(2,5) spreading
+~@(1,5) spawned
+~@(3,6) spreading
+~@(3,7) spawned
+~@(3,4) spreading
+~@(3,3) spawned
+map:
+||||||||||
+||...~ss||
+|||||~|s||
+|.v~~~~~||
+||.||||.||
+||e|||||||
+
+iteration 4
+w@(2,5) moving S
+f@(3,4) moving W
+map:
+||||||||||
+||...~ss||
+|||||~|s||
+|.v~~~~~||
+||.||||.||
+||e|||||||
+
+iteration 5
+w@(3,5) moving W
+~@(3,5) spreading
+f@(3,3) moving W
+~@(2,5) spreading
+~@(3,6) spreading
+~@(3,4) spreading
+~@(1,5) spreading
+~@(1,6) spawned
+~@(1,4) spawned
+~@(3,7) spreading
+~@(2,7) spawned
+~@(4,7) spawned
+~@(3,3) spreading
+~@(3,2) spawned
+map:
+||||||||||
+||..~~~s||
+|||||~|~||
+|.~~~~~~||
+||.||||~||
+||e|||||||
+
+iteration 6
+w@(3,4) moving W
+f@(3,2) moving S
+map:
+||||||||||
+||..~~~s||
+|||||~|~||
+|.~~~~~~||
+||f||||~||
+||e|||||||
+
+iteration 7
+w@(3,3) moving W
+s@(1,6) spreading
+s@(1,7) spreading
+~@(3,5) spreading
+f@(4,2) moving S
+f@(5,2) safe
+~@(2,5) spreading
+~@(3,6) spreading
+~@(3,4) spreading
+s@(1,5) spreading
+s@(2,5) spawned
+s@(1,4) spawned
+s@(2,7) spreading
+s@(3,7) spawned
+~@(1,5) spreading
+~@(3,7) spreading
+~@(3,3) spreading
+~@(1,6) spreading
+~@(1,7) spawned
+~@(1,4) spreading
+~@(1,3) spawned
+~@(2,7) spreading
+~@(4,7) spreading
+~@(3,2) spreading
+~@(4,2) spawned
+~@(3,1) spawned
+map:
+||||||||||
+||.~~~~~||
+|||||~|~||
+|~~~~~~~||
+||~||||~||
+||f|||||||
+
+iteration 8
+w@(3,2) moving W
+map:
+||||||||||
+||.~~~~~||
+|||||~|~||
+|~~~~~~~||
+||~||||~||
+||f|||||||
+
+iteration 9
+w@(3,1) staying here
+~@(3,5) spreading
+~@(2,5) spreading
+~@(3,6) spreading
+~@(3,4) spreading
+~@(1,5) spreading
+~@(3,7) spreading
+~@(3,3) spreading
+~@(1,6) spreading
+~@(1,4) spreading
+~@(2,7) spreading
+~@(4,7) spreading
+~@(3,2) spreading
+~@(1,7) spreading
+~@(1,3) spreading
+~@(1,2) spawned
+~@(4,2) spreading
+~@(5,2) spawned
+~@(3,1) spreading
+map:
+||||||||||
+||~~~~~~||
+|||||~|~||
+|~~~~~~~||
+||~||||~||
+||~|||||||
+
+iteration 10
+w@(3,1) staying here
+map:
+||||||||||
+||~~~~~~||
+|||||~|~||
+|~~~~~~~||
+||~||||~||
+||~|||||||
+
+iteration 11
+w@(3,1) staying here
+s@(1,6) spreading
+s@(1,7) spreading
+~@(3,5) spreading
+~@(2,5) spreading
+~@(3,6) spreading
+~@(3,4) spreading
+s@(1,5) spreading
+s@(2,7) spreading
+~@(1,5) spreading
+~@(3,7) spreading
+~@(3,3) spreading
+~@(1,6) spreading
+~@(1,4) spreading
+~@(2,7) spreading
+~@(4,7) spreading
+~@(3,2) spreading
+s@(2,5) spreading
+s@(3,5) spawned
+s@(1,4) spreading
+s@(1,3) spawned
+s@(3,7) spreading
+s@(4,7) spawned
+s@(3,6) spawned
+~@(1,7) spreading
+~@(1,3) spreading
+~@(4,2) spreading
+~@(3,1) spreading
+~@(1,2) spreading
+~@(5,2) spreading
+map:
+||||||||||
+||~~~~~~||
+|||||~|~||
+|~~~~~~~||
+||~||||~||
+||~|||||||
+
+iteration 12
+w@(3,1) staying here
+map:
+||||||||||
+||~~~~~~||
+|||||~|~||
+|~~~~~~~||
+||~||||~||
+||~|||||||
+
+iteration 13
+w@(3,1) staying here
+~@(3,5) spreading
+~@(2,5) spreading
+~@(3,6) spreading
+~@(3,4) spreading
+~@(1,5) spreading
+~@(3,7) spreading
+~@(3,3) spreading
+~@(1,6) spreading
+~@(1,4) spreading
+~@(2,7) spreading
+~@(4,7) spreading
+~@(3,2) spreading
+~@(1,7) spreading
+~@(1,3) spreading
+~@(4,2) spreading
+~@(3,1) spreading
+~@(1,2) spreading
+~@(5,2) spreading
+map:
+||||||||||
+||~~~~~~||
+|||||~|~||
+|~~~~~~~||
+||~||||~||
+||~|||||||
+
+iteration 14
+w@(3,1) staying here
+map:
+||||||||||
+||~~~~~~||
+|||||~|~||
+|~~~~~~~||
+||~||||~||
+||~|||||||
+
+iteration 15
+w@(3,1) staying here
+s@(1,6) spreading
+s@(1,7) spreading
+~@(3,5) spreading
+~@(2,5) spreading
+~@(3,6) spreading
+~@(3,4) spreading
+s@(1,5) spreading
+s@(2,7) spreading
+~@(1,5) spreading
+~@(3,7) spreading
+~@(3,3) spreading
+~@(1,6) spreading
+~@(1,4) spreading
+~@(2,7) spreading
+~@(4,7) spreading
+~@(3,2) spreading
+s@(2,5) spreading
+s@(1,4) spreading
+s@(3,7) spreading
+~@(1,7) spreading
+~@(1,3) spreading
+~@(4,2) spreading
+~@(3,1) spreading
+~@(1,2) spreading
+~@(5,2) spreading
+s@(3,5) spreading
+s@(3,4) spawned
+s@(1,3) spreading
+s@(1,2) spawned
+s@(4,7) spreading
+s@(3,6) spreading
+map:
+||||||||||
+||~~~~~~||
+|||||~|~||
+|~~~~~~~||
+||~||||~||
+||~|||||||
+
+iteration 16
+w@(3,1) staying here
+map:
+||||||||||
+||~~~~~~||
+|||||~|~||
+|~~~~~~~||
+||~||||~||
+||~|||||||
+
+iteration 17
+w@(3,1) staying here
+~@(3,5) spreading
+~@(2,5) spreading
+~@(3,6) spreading
+~@(3,4) spreading
+~@(1,5) spreading
+~@(3,7) spreading
+~@(3,3) spreading
+~@(1,6) spreading
+~@(1,4) spreading
+~@(2,7) spreading
+~@(4,7) spreading
+~@(3,2) spreading
+~@(1,7) spreading
+~@(1,3) spreading
+~@(4,2) spreading
+~@(3,1) spreading
+~@(1,2) spreading
+~@(5,2) spreading
+map:
+||||||||||
+||~~~~~~||
+|||||~|~||
+|~~~~~~~||
+||~||||~||
+||~|||||||
+
+iteration 18
+w@(3,1) staying here
+map:
+||||||||||
+||~~~~~~||
+|||||~|~||
+|~~~~~~~||
+||~||||~||
+||~|||||||
+
+iteration 19
+w@(3,1) staying here
+s@(1,6) spreading
+s@(1,7) spreading
+~@(3,5) spreading
+~@(2,5) spreading
+~@(3,6) spreading
+~@(3,4) spreading
+s@(1,5) spreading
+s@(2,7) spreading
+~@(1,5) spreading
+~@(3,7) spreading
+~@(3,3) spreading
+~@(1,6) spreading
+~@(1,4) spreading
+~@(2,7) spreading
+~@(4,7) spreading
+~@(3,2) spreading
+s@(2,5) spreading
+s@(1,4) spreading
+s@(3,7) spreading
+~@(1,7) spreading
+~@(1,3) spreading
+~@(4,2) spreading
+~@(3,1) spreading
+~@(1,2) spreading
+~@(5,2) spreading
+s@(3,5) spreading
+s@(1,3) spreading
+s@(4,7) spreading
+s@(3,6) spreading
+s@(3,4) spreading
+s@(3,3) spawned
+s@(1,2) spreading
+map:
+||||||||||
+||~~~~~~||
+|||||~|~||
+|~~~~~~~||
+||~||||~||
+||~|||||||
+
+iteration 20
+w@(3,1) staying here
+map:
+||||||||||
+||~~~~~~||
+|||||~|~||
+|~~~~~~~||
+||~||||~||
+||~|||||||
+
+iteration 21
+w@(3,1) staying here
+~@(3,5) spreading
+~@(2,5) spreading
+~@(3,6) spreading
+~@(3,4) spreading
+~@(1,5) spreading
+~@(3,7) spreading
+~@(3,3) spreading
+~@(1,6) spreading
+~@(1,4) spreading
+~@(2,7) spreading
+~@(4,7) spreading
+~@(3,2) spreading
+~@(1,7) spreading
+~@(1,3) spreading
+~@(4,2) spreading
+~@(3,1) spreading
+~@(1,2) spreading
+~@(5,2) spreading
+map:
+||||||||||
+||~~~~~~||
+|||||~|~||
+|~~~~~~~||
+||~||||~||
+||~|||||||
+
+iteration 22
+w@(3,1) staying here
+map:
+||||||||||
+||~~~~~~||
+|||||~|~||
+|~~~~~~~||
+||~||||~||
+||~|||||||
+
+iteration 23
+w@(3,1) staying here
+s@(1,6) spreading
+s@(1,7) spreading
+~@(3,5) spreading
+~@(2,5) spreading
+~@(3,6) spreading
+~@(3,4) spreading
+s@(1,5) spreading
+s@(2,7) spreading
+~@(1,5) spreading
+~@(3,7) spreading
+~@(3,3) spreading
+~@(1,6) spreading
+~@(1,4) spreading
+~@(2,7) spreading
+~@(4,7) spreading
+~@(3,2) spreading
+s@(2,5) spreading
+s@(1,4) spreading
+s@(3,7) spreading
+~@(1,7) spreading
+~@(1,3) spreading
+~@(4,2) spreading
+~@(3,1) spreading
+~@(1,2) spreading
+~@(5,2) spreading
+s@(3,5) spreading
+s@(1,3) spreading
+s@(4,7) spreading
+s@(3,6) spreading
+s@(3,4) spreading
+s@(1,2) spreading
+s@(3,3) spreading
+s@(3,2) spawned
+map:
+||||||||||
+||~~~~~~||
+|||||~|~||
+|~~~~~~~||
+||~||||~||
+||~|||||||
+
+iteration 24
+w@(3,1) staying here
+map:
+||||||||||
+||~~~~~~||
+|||||~|~||
+|~~~~~~~||
+||~||||~||
+||~|||||||
+
+iteration 25
+w@(3,1) staying here
+~@(3,5) spreading
+~@(2,5) spreading
+~@(3,6) spreading
+~@(3,4) spreading
+~@(1,5) spreading
+~@(3,7) spreading
+~@(3,3) spreading
+~@(1,6) spreading
+~@(1,4) spreading
+~@(2,7) spreading
+~@(4,7) spreading
+~@(3,2) spreading
+~@(1,7) spreading
+~@(1,3) spreading
+~@(4,2) spreading
+~@(3,1) spreading
+~@(1,2) spreading
+~@(5,2) spreading
+map:
+||||||||||
+||~~~~~~||
+|||||~|~||
+|~~~~~~~||
+||~||||~||
+||~|||||||
+
+iteration 26
+w@(3,1) staying here
+map:
+||||||||||
+||~~~~~~||
+|||||~|~||
+|~~~~~~~||
+||~||||~||
+||~|||||||
+
+iteration 27
+w@(3,1) staying here
+s@(1,6) spreading
+s@(1,7) spreading
+~@(3,5) spreading
+~@(2,5) spreading
+~@(3,6) spreading
+~@(3,4) spreading
+s@(1,5) spreading
+s@(2,7) spreading
+~@(1,5) spreading
+~@(3,7) spreading
+~@(3,3) spreading
+~@(1,6) spreading
+~@(1,4) spreading
+~@(2,7) spreading
+~@(4,7) spreading
+~@(3,2) spreading
+s@(2,5) spreading
+s@(1,4) spreading
+s@(3,7) spreading
+~@(1,7) spreading
+~@(1,3) spreading
+~@(4,2) spreading
+~@(3,1) spreading
+~@(1,2) spreading
+~@(5,2) spreading
+s@(3,5) spreading
+s@(1,3) spreading
+s@(4,7) spreading
+s@(3,6) spreading
+s@(3,4) spreading
+s@(1,2) spreading
+s@(3,3) spreading
+s@(3,2) spreading
+s@(4,2) spawned
+s@(3,1) spawned
+s@(3,1) killed w@(3,1)
+map:
+||||||||||
+||~~~~~~||
+|||||~|~||
+|~~~~~~~||
+||~||||~||
+||~|||||||
+
+end simulation

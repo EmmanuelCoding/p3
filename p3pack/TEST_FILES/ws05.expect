@@ -1,0 +1,54 @@
+begin simulation
+w@(1,3)
+s@(2,3)
+s@(2,4)
+||||||
+|.vw||
+|..ss|
+||>.e|
+||||||
+
+iteration 0
+w@(1,3) moving W
+map:
+||||||
+|.w.||
+|..ss|
+||>.e|
+||||||
+
+iteration 1
+w@(1,2) moving W
+map:
+||||||
+|wv.||
+|..ss|
+||>.e|
+||||||
+
+iteration 2
+w@(1,1) moving S
+map:
+||||||
+|.v.||
+|w.ss|
+||>.e|
+||||||
+
+iteration 3
+w@(2,1) moving E
+s@(2,3) spreading
+s@(1,3) spawned
+s@(3,3) spawned
+s@(2,2) spawned
+s@(2,2) killed w@(2,2)
+s@(2,4) spreading
+s@(3,4) spawned
+map:
+||||||
+|.vs||
+|.sss|
+||>ss|
+||||||
+
+end simulation

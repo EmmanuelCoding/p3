@@ -1,0 +1,97 @@
+begin simulation
+w@(1,1)
+s@(2,2)
+|||||
+|w..|
+|.s.|
+|...|
+|||||
+
+iteration 0
+w@(1,1) moving E
+map:
+|||||
+|.w.|
+|.s.|
+|...|
+|||||
+
+iteration 1
+w@(1,2) moving E
+map:
+|||||
+|..w|
+|.s.|
+|...|
+|||||
+
+iteration 2
+w@(1,3) moving S
+map:
+|||||
+|...|
+|.sw|
+|...|
+|||||
+
+iteration 3
+w@(2,3) moving S
+s@(2,2) spreading
+s@(1,2) spawned
+s@(2,3) spawned
+s@(3,2) spawned
+s@(2,1) spawned
+map:
+|||||
+|.s.|
+|sss|
+|.sw|
+|||||
+
+iteration 4
+w@(3,3) staying here
+map:
+|||||
+|.s.|
+|sss|
+|.sw|
+|||||
+
+iteration 5
+w@(3,3) staying here
+map:
+|||||
+|.s.|
+|sss|
+|.sw|
+|||||
+
+iteration 6
+w@(3,3) staying here
+map:
+|||||
+|.s.|
+|sss|
+|.sw|
+|||||
+
+iteration 7
+w@(3,3) staying here
+s@(2,2) spreading
+s@(1,2) spreading
+s@(1,3) spawned
+s@(1,1) spawned
+s@(2,3) spreading
+s@(3,3) spawned
+s@(3,3) killed w@(3,3)
+s@(3,2) spreading
+s@(3,1) spawned
+s@(2,1) spreading
+map:
+|||||
+|sss|
+|sss|
+|sss|
+|||||
+
+end simulation

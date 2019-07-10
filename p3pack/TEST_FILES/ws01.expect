@@ -1,0 +1,39 @@
+begin simulation
+w@(1,1)
+s@(1,2)
+||||
+|ws|
+||||
+
+iteration 0
+w@(1,1) staying here
+map:
+||||
+|ws|
+||||
+
+iteration 1
+w@(1,1) staying here
+map:
+||||
+|ws|
+||||
+
+iteration 2
+w@(1,1) staying here
+map:
+||||
+|ws|
+||||
+
+iteration 3
+w@(1,1) staying here
+s@(1,2) spreading
+s@(1,1) spawned
+s@(1,1) killed w@(1,1)
+map:
+||||
+|ss|
+||||
+
+end simulation

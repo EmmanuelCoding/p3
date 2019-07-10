@@ -1,0 +1,29 @@
+begin simulation
+f@(1,1)
+||||||
+|f..e|
+||||||
+
+iteration 0
+f@(1,1) moving E
+map:
+||||||
+|.f.e|
+||||||
+
+iteration 1
+f@(1,2) moving E
+map:
+||||||
+|..fe|
+||||||
+
+iteration 2
+f@(1,3) moving E
+f@(1,4) safe
+map:
+||||||
+|...f|
+||||||
+
+end simulation

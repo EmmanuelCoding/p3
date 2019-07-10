@@ -1,0 +1,81 @@
+begin simulation
+f@(3,2)
+||||||
+|e...|
+|...<|
+|.f.^|
+|e...|
+||||||
+
+iteration 0
+f@(3,2) moving E
+map:
+||||||
+|e...|
+|...<|
+|..f^|
+|e...|
+||||||
+
+iteration 1
+f@(3,3) moving E
+map:
+||||||
+|e...|
+|...<|
+|...f|
+|e...|
+||||||
+
+iteration 2
+f@(3,4) moving N
+map:
+||||||
+|e...|
+|...f|
+|...^|
+|e...|
+||||||
+
+iteration 3
+f@(2,4) moving W
+map:
+||||||
+|e...|
+|..f<|
+|...^|
+|e...|
+||||||
+
+iteration 4
+f@(2,3) moving W
+map:
+||||||
+|e...|
+|.f.<|
+|...^|
+|e...|
+||||||
+
+iteration 5
+f@(2,2) moving W
+map:
+||||||
+|e...|
+|f..<|
+|...^|
+|e...|
+||||||
+
+iteration 6
+f@(2,1) moving N
+f@(1,1) safe
+map:
+||||||
+|f...|
+|...<|
+|...^|
+|e...|
+||||||
+
+end simulation

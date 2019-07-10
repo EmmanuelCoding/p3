@@ -1,0 +1,28 @@
+begin simulation
+s@(2,2)
+f@(3,2)
+|||||||
+|.e...|
+|.s...|
+|.f..^|
+|||||||
+
+iteration 0
+f@(3,2) moving N
+map:
+|||||||
+|.e...|
+|.s...|
+|....^|
+|||||||
+
+iteration 1
+s@(2,2) killed f@(2,2)
+map:
+|||||||
+|.e...|
+|.s...|
+|....^|
+|||||||
+
+end simulation

@@ -1,3 +1,5 @@
+/*contains permanent objects on map (walls, signs, etc.) that are at a given coordinate and
+can be accompanied by any Thing */
 public enum Spot implements Representable, Passable{
     Open("."),Wall("|"),Exit("e"),SignN("^"),SignE(">"),SignS("v"),SignW("<");
 

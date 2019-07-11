@@ -1,4 +1,7 @@
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Map {
     protected Spot[][] floorplan;
@@ -6,7 +9,13 @@ public class Map {
     protected java.io.PrintStream log;
 
     Map(String filename, PrintStream log) throws IOException{
-            FileInputStream fyle = new FileInputStream(filename);
+        int x;
+        int y;
+        //loop through once to determine map dimensions
+
+        // build empty floorplan
+        //
+            FileReader fyle = new FileReader(filename);
             //loop through each char in fyle and add it to the floorplan
             int i = 0;
             int j = 0;
@@ -40,8 +49,41 @@ public class Map {
         int count = 0;
         for (int r = 0;r < floorplan.length;r++){
             for (int c = 0; c < floorplan[r].length;c++){
-                if (floorplan[r][c] == Spot.)
+                if (floorplan[r][c] == )
             }
         }
+    }
+    public void addThing(Thing a) {
+        List<Thing> list = new ArrayList<>(Arrays.asList(things));
+        list.add(a);
+        things = new Thing[list.size()];
+        things = list.toArray(things);
+    }
+    public Thing[] thingsAt(Coord c){
+        List<Thing> thingsatArray = new ArrayList<>(0);
+        //check if c is on map
+        if  (!this.onMap(c)){return null;}
+        //loop through things to see if there's anything with the same coordinate
+        //add it to thingsatArray, if so
+        for (Thing thing : things){
+            if (thing.getLoc() == c){
+                thingsatArray.add(thing);
+            }
+        }
+        Thing[] thingsAt = new Thing[thingsatArray.size()];
+        thingsAt = thingsatArray.toArray(thingsAt);
+        return thingsAt;
+    }
+    public boolean canLookThroughLocation(Coord c){
+
+    }
+    public boolean canPassThroughLocation(Coord c) {
+
+    }
+    public void iterate(){
+
+    }
+    @Override public String toString(){
+
     }
 }

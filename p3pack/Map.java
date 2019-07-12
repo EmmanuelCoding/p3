@@ -10,6 +10,7 @@ public class Map {
     protected java.io.PrintStream log;
 
     Map(String filename, PrintStream log) throws IOException{
+        //READ FILE////////////////////////////////////////////////////////////
         //loop through file to determine map dimensions
         int rows = 0;
         int cols = 0;
@@ -26,19 +27,27 @@ public class Map {
             ++rows;
         }
         s1.close();
+        //CREATE MAP///////////////////////////////////////////////////////////
         //make empty floorplan
         floorplan = new Spot[rows][cols];
-        int k = 0;
+        int k = 0;//index in strings
+        //go through each row, filling in cols with "Spot"s
         for (int i = 0;i < rows;i++){
             for (int j = 0; j < cols; j++){
-                for (Spot s : Spot.values()){
-                    if (s.toString().equals(strings.get(k))){//check if it's a Spot, add it if so
+                for (Spot s : Spot.values()){//loop through all possible Spots
+                    if (s.toString().equals(strings.get(k))){//check if it's a Spot; add it if so
                         floorplan[i][j] = s;
+                    }else{//create a new thing & add it to things
+                        switch (strings.get(k)){
+                            case "f"://Person follower
+                            case "w"://Person weirdo
+                            case "s"://Threat stickyIcky
+                            case "~"://Threat smoke
+                        }
                     }
                 }
-                k++;
+                k++;//next index of strings
             }
-            floorplan[i] =
         }
     }
     public boolean onMap(Coord c){
@@ -69,8 +78,10 @@ public class Map {
     }
     public Thing[] thingsAt(Coord c){
         List<Thing> thingsatArray = new ArrayList<>(0);
-        //check if c is on map
-        if  (!this.onMap(c)){return null;}
+        //if c not on map return empty array
+        if  (!this.onMap(c)){
+            Thing[] noThings = new Thing[0];
+            return noThings;}
         //loop through things to see if there's anything with the same coordinate
         //add it to thingsatArray, if so
         for (Thing thing : things){
@@ -83,10 +94,26 @@ public class Map {
         return thingsAt;
     }
     public boolean canLookThroughLocation(Coord c){
-
+        boolean canLookThroughLocation = true;
+        Thing[] checkThings = thingsAt(c);
+        for (Thing thing : checkThings){
+            if (!thing.canLookThrough()){
+                canLookThroughLocation = false;
+                break;
+            }
+        }
+        return canLookThroughLocation;
     }
     public boolean canPassThroughLocation(Coord c) {
-
+        boolean canPassThroughLocation = true;
+        Thing[] checkThings = thingsAt(c);
+        for (Thing thing : checkThings){
+            if (!thing.canPassThrough()){
+                canPassThroughLocation = false;
+                break;
+            }
+        }
+        return canPassThroughLocation;
     }
     public void iterate(){
 

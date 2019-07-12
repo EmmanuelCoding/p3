@@ -2,6 +2,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 
 public class Map {
     protected Spot[][] floorplan;
@@ -9,28 +10,35 @@ public class Map {
     protected java.io.PrintStream log;
 
     Map(String filename, PrintStream log) throws IOException{
-        int x;
-        int y;
-        //loop through once to determine map dimensions
-
-        // build empty floorplan
-        //
-            FileReader fyle = new FileReader(filename);
-            //loop through each char in fyle and add it to the floorplan
-            int i = 0;
-            int j = 0;
-            while (fyle.read() != -1){
-                if ((char)fyle.read() == '\n'){
-                    i++;
-                }else{
-                    try{
-                    floorplan[i][j] = Spot.valueOf(String.valueOf((char)fyle.read()));
-                    }catch (IllegalArgumentException iex) {
-                        log.append((char) fyle.read());
+        //loop through file to determine map dimensions
+        int rows = 0;
+        int cols = 0;
+        String str = "";
+        List<String> strings = new ArrayList<>(0);
+        Scanner s1 = new Scanner(new File(filename));
+        while (s1.hasNextLine()){ //how many rows
+            for (int i = 0; i < s1.nextLine().length();i++){ //how many cols & take note of characters to be checked in a sec
+                char c = s1.next().charAt(i);
+                str += c;
+                if (c != '\n'){++cols;}
+            }
+            strings.add(str);
+            ++rows;
+        }
+        s1.close();
+        //make empty floorplan
+        floorplan = new Spot[rows][cols];
+        int k = 0;
+        for (int i = 0;i < rows;i++){
+            for (int j = 0; j < cols; j++){
+                for (Spot s : Spot.values()){
+                    if (s.toString().equals(strings.get(k))){//check if it's a Spot, add it if so
+                        floorplan[i][j] = s;
                     }
-                    j++;
                 }
-
+                k++;
+            }
+            floorplan[i] =
         }
     }
     public boolean onMap(Coord c){

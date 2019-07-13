@@ -7,6 +7,7 @@ public abstract class Person extends Thing{
     public Person(Coord loc, String repr, Map map, PrintStream log){
         super(loc,repr,map,log);
         facing = Direction.N;
+        status = Status.Escaping;
     }
     public abstract Coord chooseMove();
     @Override public void doAction(){

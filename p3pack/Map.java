@@ -72,11 +72,12 @@ public class Map {
     }
     public int peopleRemaining(){
         int count = 0;
-        for (int r = 0;r < floorplan.length;r++){
-            for (int c = 0; c < floorplan[r].length;c++){
-                if (floorplan[r][c] == )
+        for (Thing thing : things){
+            if (thing instanceof Person){
+                if (((Person) thing).status == Status.Escaping){count++;}
             }
         }
+        return count;
     }
     public void addThing(Thing a) {
         List<Thing> list = new ArrayList<>(Arrays.asList(things));
@@ -135,15 +136,20 @@ public class Map {
         for (int row = 0 ; row < floorplan.length;row++){
             for (int col = 0; col <= floorplan[row].length;col++){
                 if (col == floorplan[row].length){deString += "\n";}
-                else if (thingsAt(new Coord(row,col)).length == 0 || floorplan[row][col] == Spot.Wall){/*check if no things
-    or spot is a wall*/
-                    deString += floorplan[row][col];
+                //if no things or spot is a wall, print spot
+                else if (thingsAt(new Coord(row,col)).length == 0 || floorplan[row][col] == Spot.Wall){
+                    deString += floorplan[row][col].toString();
                 }
                 else{
                     for(Thing thing : thingsAt(new Coord(row,col))){
-                        switch (thing){
-                            case thing:
-                        }
+                        if (thing instanceof Smoke){deString += ((Smoke)thing).toString();}
+                        else if (thing instanceof StickyIcky){deString += ((StickyIcky)thing).toString();}
+                        else if (thing instanceof Person){deString += thing.toString();}
+                    }
+                    if (floorplan[row][col] == Spot.Exit || floorplan[row][col] == Spot.Open
+                    || floorplan[row][col] == Spot.SignN || floorplan[row][col] == Spot.SignS
+                    || floorplan[row][col] == Spot.SignE || floorplan[row][col] == Spot.SignW){
+                       deString += floorplan[row][col].toString();
                     }
                 }
             }

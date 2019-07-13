@@ -7,7 +7,7 @@ public class StickyIcky extends Threat{
     }
     @Override public void spawn(Coord c){
         for (Thing thing : map.thingsAt(c)){
-            if (!(thing instanceof StickyIcky)){
+            if (!(thing instanceof StickyIcky)){//makes new StickyIcky if there isn't already one there
                 StickyIcky newSticky = new StickyIcky(c, map,log);
                 for (Thing t : map.thingsAt(c)){
                     if (t instanceof Person){((Person) t).die();}//kills all Persons
@@ -16,7 +16,7 @@ public class StickyIcky extends Threat{
         }
     }
     @Override public void doAction(){//kills all Persons
-
+        super.doAction();
     }
 
     @Override public boolean canLookThrough(){

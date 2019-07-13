@@ -28,6 +28,7 @@ public class Map {
         }
         s1.close();
         //CREATE MAP///////////////////////////////////////////////////////////
+        List<Thing> newThings = new ArrayList<>(0);
         //make empty floorplan
         floorplan = new Spot[rows][cols];
         int k = 0;//index in strings
@@ -38,17 +39,24 @@ public class Map {
                     if (s.toString().equals(strings.get(k))){//check if it's a Spot; add it if so
                         floorplan[i][j] = s;
                     }else{//create a new thing & add it to things
+                        floorplan[i][j] = Spot.Open;
                         switch (strings.get(k)){
                             case "f"://Person follower
+                                newThings.add(new Follower(new Coord(i,j),this,log));
                             case "w"://Person weirdo
+                                newThings.add(new Weirdo(new Coord(i,j),this,log));
                             case "s"://Threat stickyIcky
+                                newThings.add(new StickyIcky(new Coord(i,j),this,log));
                             case "~"://Threat smoke
+                                newThings.add(new Smoke(new Coord(i,j),this,log));
                         }
                     }
                 }
                 k++;//next index of strings
             }
         }
+        things = new Thing[newThings.size()];
+        things = newThings.toArray(things);
     }
     public boolean onMap(Coord c){
         if (c.r < floorplan.length && c.r > -1){
@@ -116,9 +124,30 @@ public class Map {
         return canPassThroughLocation;
     }
     public void iterate(){
-
+        for (Thing thing : things){
+            thing.doAction();
+        }
+        log.print("map:\n");
+        log.print(this.toString());
     }
     @Override public String toString(){
-
+        String deString = "";
+        for (int row = 0 ; row < floorplan.length;row++){
+            for (int col = 0; col <= floorplan[row].length;col++){
+                if (col == floorplan[row].length){deString += "\n";}
+                else if (thingsAt(new Coord(row,col)).length == 0 || floorplan[row][col] == Spot.Wall){/*check if no things
+    or spot is a wall*/
+                    deString += floorplan[row][col];
+                }
+                else{
+                    for(Thing thing : thingsAt(new Coord(row,col))){
+                        switch (thing){
+                            case thing:
+                        }
+                    }
+                }
+            }
+        }
+        return deString;
     }
 }

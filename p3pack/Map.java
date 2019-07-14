@@ -65,7 +65,7 @@ public class Map {
         return false;
     }
     public Spot spotAt(Coord c){
-        if(onMap(c) == true){
+        if(onMap(c)){
             return floorplan[c.r][c.c];
         }
         return null;
@@ -102,7 +102,7 @@ public class Map {
         thingsAt = thingsatArray.toArray(thingsAt);
         return thingsAt;
     }
-    public boolean canLookThroughLocation(Coord c){
+    public boolean canLookThroughLocation(Coord c){//true if no thing blocking view and not a wall
         boolean canLookThroughLocation = true;
         Thing[] checkThings = thingsAt(c);
         for (Thing thing : checkThings){
@@ -113,7 +113,7 @@ public class Map {
         }
         return canLookThroughLocation;
     }
-    public boolean canPassThroughLocation(Coord c) {
+    public boolean canPassThroughLocation(Coord c) {//true if no thing in the way and not a wall
         boolean canPassThroughLocation = true;
         Thing[] checkThings = thingsAt(c);
         for (Thing thing : checkThings){

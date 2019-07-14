@@ -13,18 +13,18 @@ public abstract class Threat extends Thing{
     @Override public void doAction(){
         charge++;
         if (charge == fullCharge){
-            //this
+            log.print(otherString() + "spreading");
             //call spawn for N,S,E,W if canPassThrough is true
-            if (this.getLoc().step(Direction.N.canPassThroughLocation())) {
+            if (map.canPassThroughLocation(this.getLoc().step(Direction.N))) {
                 spawn(this.getLoc().step(Direction.N));
             }
-            if (this.getLoc().step(Direction.N.canPassThroughLocation())) {
+            if (map.canPassThroughLocation(this.getLoc().step(Direction.S))) {
                 spawn(this.getLoc().step(Direction.S));
             }
-            if (this.getLoc().step(Direction.N.canPassThroughLocation())) {
+            if (map.canPassThroughLocation(this.getLoc().step(Direction.E))) {
                 spawn(this.getLoc().step(Direction.E));
             }
-            if (this.getLoc().step(Direction.N.canPassThroughLocation())) {
+            if (map.canPassThroughLocation(this.getLoc().step(Direction.W))) {
                 spawn(this.getLoc().step(Direction.W));
             }
         }

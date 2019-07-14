@@ -19,10 +19,10 @@ public abstract class Person extends Thing{
     }
     public void die(){status = Status.Dead;}
     @Override public void setLoc(Coord newLoc){
-        super.setLoc(newLoc);
-        if (map.spotAt(super.getLoc()) == Spot.Exit){
+        this.setLoc(newLoc);
+        if (map.spotAt(this.getLoc()) == Spot.Exit){
             status = Status.Safe;
-            log.append("");// need to add this
+            log.print(this.getLoc().toString());//@(c,r)
         }
     }
     @Override public boolean canLookThrough(){

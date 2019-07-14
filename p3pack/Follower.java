@@ -5,6 +5,6 @@ public class Follower extends Person{
         super(c,"f",map,log);
     }
     @Override public Coord chooseMove(){
-
+    return this.getLoc();
     }
 }

@@ -17,6 +17,10 @@ public class StickyIcky extends Threat{
     }
     @Override public void doAction(){//kills all Persons
         super.doAction();
+        for (Thing thing : map.thingsAt(this.getLoc())){//check if there's a living person here and kill them
+            if (thing instanceof Person && ((Person)thing).status != Status.Dead){((Person) thing).die();}
+            log.print(this.repr() + this.getLoc().toString() + " killed " + thing.repr() + thing.getLoc().toString());
+        }
     }
 
     @Override public boolean canLookThrough(){

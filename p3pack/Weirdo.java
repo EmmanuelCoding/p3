@@ -7,18 +7,24 @@ public class Weirdo extends Person{
     @Override public Coord chooseMove(){
         int numCycles = 0;
         boolean canMove = true;
-        Direction newFace;
-        Coord tryLoc = this.getLoc().step(facing);
-        while (map.spotAt(tryLoc) != Spot.Open && !map.canPassThroughLocation(tryLoc)){//while the spot isn't open and can't be walked on
-            newFace = facing.cycle();
+        Direction newFace = facing;
+        Coord tryLoc = this.getLoc().step(newFace);
+        while (map.spotAt(tryLoc) == Spot.Wall || !map.canPassThroughLocation(tryLoc)){//while the spot is wall or can't be walked on
+            newFace = newFace.cycle();
             ++numCycles;
-            if (newFace.isOpposite(facing)){newFace = newFace.cycle();++numCycles;}
+            if (newFace.isOpposite(facing) || tryLoc == this.getPrevLoc()){newFace = newFace.cycle();++numCycles;}//dont go to previous location
             if (numCycles >= 3){canMove = false;break;}
             tryLoc = this.getLoc().step(newFace);
         }
-        if (canMove){return tryLoc;}
+        if (canMove){
+            if (map.spotAt(tryLoc) == Spot.Exit){
+                this.isSafe();
+                log.print(this.repr() + this.getLoc().toString() + " safe");
+            }
+            log.print(this.repr() + this.getLoc().toString() + " moving " + newFace);
+            return tryLoc;}
         else{
-            log.print(this.repr() + this.getLoc().toString());
+            log.print(this.repr() + this.getLoc().toString() + " staying here");
             return this.getLoc();
         }
     }

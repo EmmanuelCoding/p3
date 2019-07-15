@@ -1,12 +1,14 @@
 /*contains permanent objects on map (walls, signs, etc.) that are at a given coordinate and
 can be accompanied by any Thing */
 public enum Spot implements Representable, Passable{
-    Open("."),Wall("|"),Exit("e"),SignN("^"),SignE(">"),SignS("v"),SignW("<");
+    Open(".",Direction.none),Wall("|",Direction.none),Exit("e",Direction.none),SignN("^",Direction.N),SignE(">",Direction.E),SignS("v",Direction.S),SignW("<",Direction.W);
 
     public final String repr;
+    public final Direction direction;
 
-    Spot(String symbol){
+    Spot(String symbol,Direction dir){
         this.repr = symbol;
+        this.direction = dir;
     }
     public boolean isSign(){
         switch (this){

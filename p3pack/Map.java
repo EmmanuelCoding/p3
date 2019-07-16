@@ -12,18 +12,21 @@ public class Map {
     Map(String filename, PrintStream log) throws IOException{
         //READ FILE////////////////////////////////////////////////////////////
         //loop through file to determine map dimensions
-        int rows = 0;
+        File infile = new File(filename);
+        Scanner s1 = new Scanner(infile);
         int cols = 0;
-        String str = "";
-        List<String> strings = new ArrayList<>(0);
-        Scanner s1 = new Scanner(new File(filename));
-        while (s1.hasNextLine()){ //how many rows
-            for (int i = 0; i < s1.nextLine().length();i++){ //how many cols & take note of characters to be checked in a sec
-                char c = s1.next().charAt(i);
-                str += c;
-                if (c != '\n'){++cols;}
-            }
-            strings.add(str);
+        //figure out the length of the lines(cols)
+        String[] length = s1.nextLine().trim().split("");
+        for (int i = 0;i < length.length;i++){
+            cols++;
+        }
+        List<String[]> rowList = new ArrayList<>(0);
+        //figure out how many lines(rows)
+        int rows = 0;
+        String[] daRow;
+        while (s1.hasNextLine()) { //how many rows and add them all to rowList
+            daRow = s1.nextLine().trim().split("");
+            rowList.add(daRow);
             ++rows;
         }
         s1.close();
@@ -31,30 +34,33 @@ public class Map {
         List<Thing> newThings = new ArrayList<>(0);
         //make empty floorplan
         floorplan = new Spot[rows][cols];
-        int k = 0;//index in strings
         //go through each row, filling in cols with "Spot"s
         for (int i = 0;i < rows;i++){
             for (int j = 0; j < cols; j++){
                 for (Spot s : Spot.values()){//loop through all possible Spots
-                    if (s.toString().equals(strings.get(k))){//check if it's a Spot; add it if so
-                        floorplan[i][j] = s;
-                        s.setLoc(i,j);
-                    }else{//create a new thing & add it to things
-                        floorplan[i][j] = Spot.Open;
-                        floorplan[i][j].setLoc(i,j);
-                        switch (strings.get(k)){
-                            case "f"://Person follower
-                                newThings.add(new Follower(new Coord(i,j),this,log));
-                            case "w"://Person weirdo
-                                newThings.add(new Weirdo(new Coord(i,j),this,log));
-                            case "s"://Threat stickyIcky
-                                newThings.add(new StickyIcky(new Coord(i,j),this,log));
-                            case "~"://Threat smoke
-                                newThings.add(new Smoke(new Coord(i,j),this,log));
+                    for (int r = 0;r < rowList.size();r++) {//row index for rowList
+                        for (int c = 0; c < rowList.get(r).length; c++) {//col index for rowList
+                            if (s.toString().equals(rowList.get(r)[c])) {//check if char in row is a Spot; add it if so
+                                floorplan[i][j] = s;
+                                s.setLoc(i,j);
+                            }else{//create a new thing & add it to things,if not a spot
+                                floorplan[i][j] = Spot.Open;
+                                floorplan[i][j].setLoc(i,j);
+                                switch (rowList.get(r)[c]){
+                                    case "f"://Person follower
+                                        newThings.add(new Follower(new Coord(i,j),this,log));
+                                    case "w"://Person weirdo
+                                        newThings.add(new Weirdo(new Coord(i,j),this,log));
+                                    case "s"://Threat stickyIcky
+                                        newThings.add(new StickyIcky(new Coord(i,j),this,log));
+                                    case "~"://Threat smoke
+                                        newThings.add(new Smoke(new Coord(i,j),this,log));
+                            }
                         }
                     }
+
+                    }
                 }
-                k++;//next index of strings
             }
         }
         things = new Thing[newThings.size()];

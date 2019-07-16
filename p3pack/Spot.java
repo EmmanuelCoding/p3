@@ -5,10 +5,12 @@ public enum Spot implements Representable, Passable{
 
     public final String repr;
     public final Direction direction;
+    private Coord loc;//added this for followers
 
     Spot(String symbol,Direction dir){
         this.repr = symbol;
         this.direction = dir;
+        this.loc = new Coord(0,0);
     }
     public boolean isSign(){
         switch (this){
@@ -36,5 +38,11 @@ public enum Spot implements Representable, Passable{
     @Override public boolean canLookThrough(){
         if (this != Wall){return true;}
         return false;
+    }
+    public void setLoc(int r,int c){
+        this.loc = new Coord(r,c);
+    }
+    public Coord getLoc(){
+        return this.loc;
     }
 }

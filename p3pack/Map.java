@@ -38,8 +38,10 @@ public class Map {
                 for (Spot s : Spot.values()){//loop through all possible Spots
                     if (s.toString().equals(strings.get(k))){//check if it's a Spot; add it if so
                         floorplan[i][j] = s;
+                        s.setLoc(i,j);
                     }else{//create a new thing & add it to things
                         floorplan[i][j] = Spot.Open;
+                        floorplan[i][j].setLoc(i,j);
                         switch (strings.get(k)){
                             case "f"://Person follower
                                 newThings.add(new Follower(new Coord(i,j),this,log));

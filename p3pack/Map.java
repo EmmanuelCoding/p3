@@ -27,38 +27,17 @@ public class Map {
         }
         s1.close();
         //CREATE MAP///////////////////////////////////////////////////////////
-        List<Thing> newThings = new ArrayList<>(0);
+        List<Thing> newThings = new ArrayList<>();
         //make empty floorplan
         floorplan = new Spot[rows][cols];
         //go through each row, filling in cols with "Spot"s
-        for (int i = 0;i < rows;i++){
-            for (int j = 0; j < cols; j++){
-                for (Spot s : Spot.values()){//loop through all possible Spots
-                    for (int r = 0;r < rowList.size();r++) {//row index for rowList
-                        for (int c = 0; c < rowList.get(r).length; c++) {//col index for rowList
-                            if (s.toString().equals(rowList.get(r)[c])) {//check if char in row is a Spot; add it if so
-                                floorplan[i][j] = s;
-                                s.setLoc(i,j);
-                            }else{//create a new thing & add it to things,if not a spot
-                                floorplan[i][j] = Spot.Open;
-                                floorplan[i][j].setLoc(i,j);
-                                switch (rowList.get(r)[c]) {
-                                    case "f"://Person follower
-                                        newThings.add(new Follower(new Coord(i, j), this, log));
-                                    case "w"://Person weirdo
-                                        newThings.add(new Weirdo(new Coord(i, j), this, log));
-                                    case "s"://Threat stickyIcky
-                                        newThings.add(new StickyIcky(new Coord(i, j), this, log));
-                                    case "~"://Threat smoke
-                                        newThings.add(new Smoke(new Coord(i, j), this, log));
-                                }
-                            }
-                        }
-                    }
+            for (String[] ro : rowList){
+                for (String co : ro){
+                    if (co.equals())
                 }
             }
-        }
-        things = newThings.toArray(new Thing[0]);
+        if (newThings.isEmpty()) {things = new Thing[]{};}
+        else{things = newThings.toArray(new Thing[0]);}
     }
     public boolean onMap(Coord c){
         if (c.r < floorplan.length && c.r > -1){

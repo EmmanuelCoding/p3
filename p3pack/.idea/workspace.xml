@@ -1,249 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea275349-6ca2-4f64-a351-033ecc1198ee" name="Default Changelist" comment="updated map">
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../p3.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/Coord.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/Coord.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/Direction.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/Direction.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/Follower.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/Follower.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/Map.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/Map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/Panic.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/Panic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/Passable.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/Passable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/Person.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/Person.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/Representable.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/Representable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/Spot.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/Spot.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/Status.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/Status.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/Thing.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/Thing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/Threat.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/Threat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/Weirdo.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/Weirdo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/allclasses-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/allclasses-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/allclasses-noframe.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/allclasses-noframe.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/constant-values.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/constant-values.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/index-files/index-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/index-files/index-10.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/index-files/index-11.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/index-files/index-12.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/index-files/index-13.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/index-files/index-13.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/index-files/index-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/index-files/index-14.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/index-files/index-15.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/index-files/index-15.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/index-files/index-16.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/index-files/index-16.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/index-files/index-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/index-files/index-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/index-files/index-4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/index-files/index-5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/index-files/index-6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/index-files/index-7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/index-files/index-8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/index-files/index-9.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/package-frame.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/package-frame.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/package-list" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/package-list" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../p3doc/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/../p3doc/stylesheet.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/junit_4_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_12.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="ea275349-6ca2-4f64-a351-033ecc1198ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coord.java" beforeDir="false" afterPath="$PROJECT_DIR$/Coord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoordTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/CoordTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/Direction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnumerationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/EnumerationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Follower.java" beforeDir="false" afterPath="$PROJECT_DIR$/Follower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FollowerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/FollowerTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ID.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ID.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InterfaceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/InterfaceTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/MapTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P3Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/P3Tests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Panic.java" beforeDir="false" afterPath="$PROJECT_DIR$/Panic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PanicTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/PanicTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Passable.java" beforeDir="false" afterPath="$PROJECT_DIR$/Passable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Representable.java" beforeDir="false" afterPath="$PROJECT_DIR$/Representable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Smoke.java" beforeDir="false" afterPath="$PROJECT_DIR$/Smoke.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmokeTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/SmokeTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spot.java" beforeDir="false" afterPath="$PROJECT_DIR$/Spot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StickyIcky.java" beforeDir="false" afterPath="$PROJECT_DIR$/StickyIcky.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StickyIckyTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/StickyIckyTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/complex1.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex1.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/complex1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/complex2.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex2.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/complex2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/complex3.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex3.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/complex3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/complex4.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex4.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/complex4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/complex5.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex5.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/complex5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/complex6.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex6.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/complex6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/complex7.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex7.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/complex7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/complex8.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex8.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/complex8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/complex9.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex9.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/complex9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex9.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f01.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f01.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f01.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f02.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f02.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f02.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f02.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f03.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f03.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f03.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f03.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f04.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f04.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f04.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f04.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f05.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f05.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f05.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f05.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f06.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f06.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f06.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f06.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f07.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f07.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f07.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f07.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f08.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f08.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f08.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f08.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f09.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f09.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f09.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f09.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f10.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f10.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f11.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f11.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f11.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f12.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f12.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f12.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f13.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f13.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f13.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f13.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f14.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f14.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/f14.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f14.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/fm01.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/fm01.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/fm01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/fm01.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/fm02.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/fm02.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/fm02.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/fm02.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/fs01.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/fs01.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/fs01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/fs01.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/fs02.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/fs02.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/fs02.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/fs02.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/fs03.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/fs03.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/fs03.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/fs03.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/fs04.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/fs04.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/fs04.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/fs04.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/fs05.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/fs05.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/fs05.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/fs05.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/fs06.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/fs06.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/fs06.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/fs06.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/map1.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/map1.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/map1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/map1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/map2.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/map2.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/map2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/map2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w01.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w01.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w01.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w02.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w02.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w02.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w02.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w03.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w03.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w03.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w03.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w04.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w04.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w04.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w04.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w05.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w05.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w05.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w05.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w06.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w06.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w06.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w06.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w07.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w07.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w07.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w07.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w08.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w08.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w08.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w08.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w09.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w09.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w09.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w09.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w10.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w10.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w11.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w11.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w11.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w12.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w12.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w12.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w13.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w13.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w13.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w13.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w14.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w14.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w14.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w14.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/wm01.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/wm01.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/wm01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/wm01.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/wm02.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/wm02.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/wm02.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/wm02.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/ws01.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/ws01.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/ws01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/ws01.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/ws02.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/ws02.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/ws02.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/ws02.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/ws03.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/ws03.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/ws03.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/ws03.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/ws04.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/ws04.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/ws04.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/ws04.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/ws05.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/ws05.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/ws05.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/ws05.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/ws06.expect" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/ws06.expect" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/ws06.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/ws06.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Thing.java" beforeDir="false" afterPath="$PROJECT_DIR$/Thing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Threat.java" beforeDir="false" afterPath="$PROJECT_DIR$/Threat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Weirdo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Weirdo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WeirdoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/WeirdoTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/p3pack.iml" beforeDir="false" afterPath="$PROJECT_DIR$/p3pack.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/complex1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/complex1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/complex2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/complex2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/complex3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/complex3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/complex4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/complex4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/complex5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/complex5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/complex6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/complex6.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/complex7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/complex7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/complex8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/complex8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/complex9.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/complex9.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/f01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/f01.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/f02.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/f02.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/f03.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/f03.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/f04.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/f04.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/f05.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/f05.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/f06.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/f06.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/f07.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/f07.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/f08.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/f08.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/f09.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/f09.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/f10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/f10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/f11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/f11.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/f12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/f12.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/f13.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/f13.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/f14.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/f14.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/fm01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/fm01.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/fm02.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/fm02.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/fs01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/fs01.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/fs02.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/fs02.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/fs03.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/fs03.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/fs04.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/fs04.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/fs05.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/fs05.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/fs06.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/fs06.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/map1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/map1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/map2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/map2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/w01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/w01.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/w02.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/w02.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/w03.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/w03.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/w04.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/w04.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/w05.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/w05.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/w06.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/w06.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/w07.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/w07.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/w08.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/w08.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/w09.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/w09.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/w10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/w10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/w11.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/w11.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/w12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/w12.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/w13.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/w13.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/w14.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/w14.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/wm01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/wm01.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/wm02.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/wm02.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/ws01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/ws01.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/ws02.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/ws02.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/ws03.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/ws03.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/ws04.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/ws04.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/ws05.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/ws05.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/samples/ws06.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samples/ws06.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -257,41 +18,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Follower.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3434">
-              <caret line="204" selection-start-line="204" selection-end-line="204" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Weirdo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Coord.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Map.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="45" column="87" selection-start-line="45" selection-start-column="87" selection-end-line="45" selection-end-column="87" />
+            <state relative-caret-position="323">
+              <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MapTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2813">
+              <caret line="288" column="52" lean-forward="true" selection-start-line="288" selection-start-column="52" selection-end-line="288" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -299,21 +39,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Spot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+            <state relative-caret-position="51">
+              <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
               <folding>
                 <element signature="e#1316#1317#0" expanded="true" />
                 <element signature="e#1357#1358#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Direction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="12" selection-start-column="12" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -338,22 +69,21 @@
         <option value="$PROJECT_DIR$/Weirdo.java" />
         <option value="$PROJECT_DIR$/Spot.java" />
         <option value="$PROJECT_DIR$/Follower.java" />
+        <option value="$PROJECT_DIR$/P3Tests.java" />
         <option value="$PROJECT_DIR$/Map.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="409" />
-    <option name="y" value="155" />
-    <option name="width" value="1940" />
-    <option name="height" value="1100" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="743" />
+    <option name="width" value="1184" />
+    <option name="height" value="1087" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -366,6 +96,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -404,7 +135,8 @@
       <workItem from="1563198632718" duration="3617000" />
       <workItem from="1563207791694" duration="11861000" />
       <workItem from="1563276098584" duration="8562000" />
-      <workItem from="1563301617139" duration="3012000" />
+      <workItem from="1563301617139" duration="7757000" />
+      <workItem from="1563313990939" duration="2267000" />
     </task>
     <task id="LOCAL-00001" summary="asdfasd">
       <created>1563104898848</created>
@@ -427,17 +159,31 @@
       <option name="project" value="LOCAL" />
       <updated>1563220709572</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="updated map">
+      <created>1563304676655</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1563304676655</updated>
+    </task>
+    <task id="LOCAL-00005" summary="updated map">
+      <created>1563309387565</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1563309387565</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27609000" />
+    <option name="totallyTimeSpent" value="34621000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="743" y="0" width="1184" height="1087" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12473348" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21174377" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -452,7 +198,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49975088" weight="0.3032191" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49975088" visible="true" weight="0.302935" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50024915" side_tool="true" weight="0.30289194" />
@@ -475,7 +221,8 @@
     <MESSAGE value="asdfasd" />
     <MESSAGE value="changed line endings, updated Persons, almost done" />
     <MESSAGE value="updated followers" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated followers" />
+    <MESSAGE value="updated map" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated map" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
@@ -506,13 +253,6 @@
             <element signature="e#115#116#0" expanded="true" />
             <element signature="e#153#154#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MapTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -551,20 +291,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../../../ejones41_2B1_P2/ejones41_2B1_P2/Alphabet.java">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../ejones41_2B1_P2/p2pack/P2Tests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/P3Tests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="27" column="50" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MapTests.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -623,8 +349,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Spot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+        <state relative-caret-position="51">
+          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
           <folding>
             <element signature="e#1316#1317#0" expanded="true" />
             <element signature="e#1357#1358#0" expanded="true" />
@@ -632,10 +358,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../../ejones41_2B1_P2/p2pack/P2Tests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/P3Tests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="31" column="3" lean-forward="true" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MapTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2813">
+          <caret line="288" column="52" lean-forward="true" selection-start-line="288" selection-start-column="52" selection-end-line="288" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Map.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="45" column="87" selection-start-line="45" selection-start-column="87" selection-end-line="45" selection-end-column="87" />
+        <state relative-caret-position="323">
+          <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
         </state>
       </provider>
     </entry>

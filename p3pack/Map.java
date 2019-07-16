@@ -14,19 +14,15 @@ public class Map {
         //loop through file to determine map dimensions
         File infile = new File(filename);
         Scanner s1 = new Scanner(infile);
-        int cols = 0;
-        //figure out the length of the lines(cols)
-        String[] length = s1.nextLine().trim().split("");
-        for (int i = 0;i < length.length;i++){
-            cols++;
-        }
         List<String[]> rowList = new ArrayList<>(0);
-        //figure out how many lines(rows)
+        //figure out how many lines(rows) and how many per line(cols)
         int rows = 0;
+        int cols = 0;
         String[] daRow;
-        while (s1.hasNextLine()) { //how many rows and add them all to rowList
+        while (s1.hasNextLine()) { //how many rows & cols and add them all to rowList
             daRow = s1.nextLine().trim().split("");
             rowList.add(daRow);
+            cols = daRow.length;
             ++rows;
         }
         s1.close();
@@ -46,25 +42,23 @@ public class Map {
                             }else{//create a new thing & add it to things,if not a spot
                                 floorplan[i][j] = Spot.Open;
                                 floorplan[i][j].setLoc(i,j);
-                                switch (rowList.get(r)[c]){
+                                switch (rowList.get(r)[c]) {
                                     case "f"://Person follower
-                                        newThings.add(new Follower(new Coord(i,j),this,log));
+                                        newThings.add(new Follower(new Coord(i, j), this, log));
                                     case "w"://Person weirdo
-                                        newThings.add(new Weirdo(new Coord(i,j),this,log));
+                                        newThings.add(new Weirdo(new Coord(i, j), this, log));
                                     case "s"://Threat stickyIcky
-                                        newThings.add(new StickyIcky(new Coord(i,j),this,log));
+                                        newThings.add(new StickyIcky(new Coord(i, j), this, log));
                                     case "~"://Threat smoke
-                                        newThings.add(new Smoke(new Coord(i,j),this,log));
+                                        newThings.add(new Smoke(new Coord(i, j), this, log));
+                                }
                             }
                         }
-                    }
-
                     }
                 }
             }
         }
-        things = new Thing[newThings.size()];
-        things = newThings.toArray(things);
+        things = newThings.toArray(new Thing[0]);
     }
     public boolean onMap(Coord c){
         if (c.r < floorplan.length && c.r > -1){
@@ -90,8 +84,7 @@ public class Map {
     public void addThing(Thing a) {
         List<Thing> list = new ArrayList<>(Arrays.asList(things));
         list.add(a);
-        things = new Thing[list.size()];
-        things = list.toArray(things);
+        things = list.toArray(new Thing[0]);
     }
     public Thing[] thingsAt(Coord c){
         List<Thing> thingsatArray = new ArrayList<>(0);
@@ -102,12 +95,11 @@ public class Map {
         //loop through things to see if there's anything with the same coordinate
         //add it to thingsatArray, if so
         for (Thing thing : things){
-            if (thing.getLoc() == c){
+            if (thing.getLoc().equals(c)){
                 thingsatArray.add(thing);
             }
         }
-        Thing[] thingsAt = new Thing[thingsatArray.size()];
-        thingsAt = thingsatArray.toArray(thingsAt);
+        Thing[] thingsAt = thingsatArray.toArray(new Thing[0]);
         return thingsAt;
     }
     public boolean canLookThroughLocation(Coord c){//true if no thing blocking view and not a wall

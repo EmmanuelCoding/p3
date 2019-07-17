@@ -33,28 +33,39 @@ public class Map {
         //go through each row, filling in cols with "Spot"s
             for (int ro = 0;ro < rowList.size();ro++){
                 for (int co = 0;co < rowList.get(ro).length;co++){
-                    for (Spot s : Spot.values()){
-                        if (rowList.get(ro)[co].equals(s.repr())){
-                            floorplan[ro][co] = s;
+                    int s = 0;
+                    int added = 0;
+                    while (s < Spot.values().length) {
+                        if (rowList.get(ro)[co].equals(Spot.values()[s].repr())) {
+                            floorplan[ro][co] = Spot.values()[s];
+                            s++;
                             break;
                         }
                         else{
                             floorplan[ro][co] = Spot.Open;
-                            floorplan[ro][co].setLoc(ro,co);
-                            switch (rowList.get(ro)[co]){
-                                case "f"://Person follower
-                                    newThings.add(new Follower(new Coord(ro, co), this, log));
-                                    break;
-                                case "w"://Person weirdo
-                                    newThings.add(new Weirdo(new Coord(ro, co), this, log));
-                                    break;
-                                case "s"://Threat stickyIcky
-                                    newThings.add(new StickyIcky(new Coord(ro, co), this, log));
-                                    break;
-                                case "~"://Threat smoke
-                                    newThings.add(new Smoke(new Coord(ro, co), this, log));
-                                    break;
+                            floorplan[ro][co].setLoc(ro, co);
+                            if (added == 0) {
+                                added++;
+                                switch (rowList.get(ro)[co]) {
+                                    case "f"://Person follower
+                                        newThings.add(new Follower(new Coord(ro, co), this, log));
+                                        log.print(newThings.get(newThings.size()-1).otherString());
+                                        break;
+                                    case "w"://Person weirdo
+                                        newThings.add(new Weirdo(new Coord(ro, co), this, log));
+                                        log.print(newThings.get(newThings.size()-1).otherString());
+                                        break;
+                                    case "s"://Threat stickyIcky
+                                        newThings.add(new StickyIcky(new Coord(ro, co), this, log));
+                                        log.print(newThings.get(newThings.size()-1).otherString());
+                                        break;
+                                    case "~"://Threat smoke
+                                        newThings.add(new Smoke(new Coord(ro, co), this, log));
+                                        log.print(newThings.get(newThings.size()-1).otherString());
+                                        break;
+                                }
                             }
+                            s++;
                         }
                     }
                 }
@@ -93,11 +104,10 @@ public class Map {
         things = tmpArray;
     }
     public Thing[] thingsAt(Coord c){
-        List<Thing> thingsatArray = new ArrayList<>(0);
+        List<Thing> thingsatArray = new ArrayList<>();
+        Thing[] noThings = new Thing[0];
         //if c not on map return empty array
-        if  (!this.onMap(c)){
-            Thing[] noThings = new Thing[0];
-            return noThings;}
+        if  (!this.onMap(c)){return noThings;}
         //loop through things to see if there's anything with the same coordinate
         //add it to thingsatArray, if so
         for (Thing thing : things){
@@ -105,7 +115,9 @@ public class Map {
                 thingsatArray.add(thing);
             }
         }
-        Thing[] thingsAt = thingsatArray.toArray(new Thing[0]);
+        if (thingsatArray.isEmpty()){return noThings;}
+        Thing[] thingsAt = new Thing[thingsatArray.size()];
+        thingsAt = thingsatArray.toArray(thingsAt);
         return thingsAt;
     }
     public boolean canLookThroughLocation(Coord c){//true if no thing blocking view and not a wall

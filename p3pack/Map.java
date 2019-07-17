@@ -31,9 +31,32 @@ public class Map {
         //make empty floorplan
         floorplan = new Spot[rows][cols];
         //go through each row, filling in cols with "Spot"s
-            for (String[] ro : rowList){
-                for (String co : ro){
-                    if (co.equals())
+            for (int ro = 0;ro < rowList.size();ro++){
+                for (int co = 0;co < rowList.get(ro).length;co++){
+                    for (Spot s : Spot.values()){
+                        if (rowList.get(ro)[co].equals(s.repr())){
+                            floorplan[ro][co] = s;
+                            break;
+                        }
+                        else{
+                            floorplan[ro][co] = Spot.Open;
+                            floorplan[ro][co].setLoc(ro,co);
+                            switch (rowList.get(ro)[co]){
+                                case "f"://Person follower
+                                    newThings.add(new Follower(new Coord(ro, co), this, log));
+                                    break;
+                                case "w"://Person weirdo
+                                    newThings.add(new Weirdo(new Coord(ro, co), this, log));
+                                    break;
+                                case "s"://Threat stickyIcky
+                                    newThings.add(new StickyIcky(new Coord(ro, co), this, log));
+                                    break;
+                                case "~"://Threat smoke
+                                    newThings.add(new Smoke(new Coord(ro, co), this, log));
+                                    break;
+                            }
+                        }
+                    }
                 }
             }
         if (newThings.isEmpty()) {things = new Thing[]{};}
@@ -61,9 +84,13 @@ public class Map {
         return count;
     }
     public void addThing(Thing a) {
-        List<Thing> list = new ArrayList<>(Arrays.asList(things));
-        list.add(a);
-        things = list.toArray(new Thing[0]);
+        if (things == null){things = new Thing[0];}
+        int cSize = things.length;
+        int nSize = cSize + 1;
+        Thing[] tmpArray = new Thing[nSize];
+        for (int i = 0;i < cSize;i++){tmpArray[i] = things[i];}
+        tmpArray[nSize - 1] = a;
+        things = tmpArray;
     }
     public Thing[] thingsAt(Coord c){
         List<Thing> thingsatArray = new ArrayList<>(0);
@@ -74,7 +101,7 @@ public class Map {
         //loop through things to see if there's anything with the same coordinate
         //add it to thingsatArray, if so
         for (Thing thing : things){
-            if (thing.getLoc().equals(c)){
+            if (thing.getLoc().c == c.c && thing.getLoc().r == c.r){
                 thingsatArray.add(thing);
             }
         }
@@ -120,14 +147,16 @@ public class Map {
                     deString += floorplan[row][col].toString();
                 }
                 else{
+                    boolean shouldskip = false;
                     for(Thing thing : thingsAt(new Coord(row,col))){
-                        if (thing instanceof Smoke){deString += ((Smoke)thing).toString();}
-                        else if (thing instanceof StickyIcky){deString += ((StickyIcky)thing).toString();}
-                        else if (thing instanceof Person){deString += thing.toString();}
+                        if (thing instanceof Smoke){shouldskip = true; deString += ((Smoke)thing).repr();break;}
+                        else if (thing instanceof StickyIcky){shouldskip = true; deString += ((StickyIcky)thing).repr();break;}
+                        else if (thing instanceof Follower){shouldskip = true; deString += ((Follower)thing).repr();break;}
+                        else if (thing instanceof Weirdo){shouldskip = true; deString += ((Weirdo)thing).repr();break;}
                     }
-                    if (floorplan[row][col] == Spot.Exit || floorplan[row][col] == Spot.Open
+                    if ((floorplan[row][col] == Spot.Exit || floorplan[row][col] == Spot.Open
                     || floorplan[row][col] == Spot.SignN || floorplan[row][col] == Spot.SignS
-                    || floorplan[row][col] == Spot.SignE || floorplan[row][col] == Spot.SignW){
+                    || floorplan[row][col] == Spot.SignE || floorplan[row][col] == Spot.SignW) && !shouldskip){
                        deString += floorplan[row][col].toString();
                     }
                 }

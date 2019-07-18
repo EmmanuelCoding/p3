@@ -8,19 +8,20 @@ public class Map {
     protected Spot[][] floorplan;
     protected Thing[] things;
     protected java.io.PrintStream log;
+    int rows = 0;
+    int cols = 0;
 
     Map(String filename, PrintStream log) throws IOException{
+        this.log = log;
         //READ FILE////////////////////////////////////////////////////////////
         //loop through file to determine map dimensions
         File infile = new File(filename);
         Scanner s1 = new Scanner(infile);
         List<String[]> rowList = new ArrayList<>(0);
         //figure out how many lines(rows) and how many per line(cols)
-        int rows = 0;
-        int cols = 0;
         String[] daRow;
-        while (s1.hasNextLine()) { //how many rows & cols and add them all to rowList
-            daRow = s1.nextLine().trim().split("");
+        while (s1.hasNext()) { //how many rows & cols and add them all to rowList
+            daRow = s1.next().trim().split("");
             rowList.add(daRow);
             cols = daRow.length;
             ++rows;
@@ -70,8 +71,7 @@ public class Map {
                     }
                 }
             }
-        if (newThings.isEmpty()) {things = new Thing[]{};}
-        else{things = newThings.toArray(new Thing[0]);}
+        things = newThings.toArray(new Thing[0]);
     }
     public boolean onMap(Coord c){
         if (c.r < floorplan.length && c.r > -1){
@@ -129,6 +129,14 @@ public class Map {
                 break;
             }
         }
+        for (Spot[] roe: floorplan){
+            for (Spot s : roe){
+                if (!s.canLookThrough()){
+                    canLookThroughLocation = false;
+                    break;
+                }
+            }
+        }
         return canLookThroughLocation;
     }
     public boolean canPassThroughLocation(Coord c) {//true if no thing in the way and not a wall
@@ -140,14 +148,21 @@ public class Map {
                 break;
             }
         }
+        for (Spot[] roe: floorplan){
+            for (Spot s : roe){
+                if (!s.canPassThrough()){
+                    canPassThroughLocation = false;
+                    break;
+                }
+            }
+        }
         return canPassThroughLocation;
     }
     public void iterate(){
         for (Thing thing : things){
             thing.doAction();
         }
-        log.print("map:\n");
-        log.print(this.toString());
+        log.print("map:\n" + this.toString());
     }
     @Override public String toString(){
         String deString = "";

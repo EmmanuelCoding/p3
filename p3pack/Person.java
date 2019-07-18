@@ -14,15 +14,14 @@ public abstract class Person extends Thing{
 
     }
     public boolean isSafe(){
-        if (status == Status.Safe){return true;}
-        return false;
+        return this.status == Status.Safe;
     }
     public void die(){status = Status.Dead;}
     @Override public void setLoc(Coord newLoc){
-        this.setLoc(newLoc);
+        super.setLoc(newLoc);
         if (map.spotAt(this.getLoc()) == Spot.Exit){
             status = Status.Safe;
-            log.print(this.getLoc().toString());//@(c,r)
+            log.print(this.getLoc().toString());//@(r,c)
         }
     }
     @Override public boolean canLookThrough(){

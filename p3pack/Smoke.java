@@ -5,6 +5,7 @@ public class Smoke extends Threat{
         super(c,"~",2,map,log);
     }
     @Override public void spawn(Coord c){
+        this.doAction();
         boolean hasSmoke = false;
         for (Thing thing : map.thingsAt(c)) {
             if (thing instanceof Smoke) {//makes new Smoke if there isn't already one there

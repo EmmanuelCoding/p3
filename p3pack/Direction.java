@@ -29,16 +29,6 @@ public enum Direction {
         return none;
     }
     public boolean isOpposite(Direction other){
-        switch (this) {
-            case N:
-                if (other == S){ return true;}
-            case S:
-                if (other == N){ return true;}
-            case E:
-                if (other == W){ return true;}
-            case W:
-                if (other == E){ return true;}
-        }
-        return false;
+        return this.getOpposite().equals(other);
     }
 }

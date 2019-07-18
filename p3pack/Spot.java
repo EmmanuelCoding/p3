@@ -33,11 +33,11 @@ public enum Spot implements Representable, Passable{
     }
     @Override public boolean canPassThrough(){
         if (this != Wall){return true;}
-        return false;
+        else{return false;}
     }
     @Override public boolean canLookThrough(){
         if (this != Wall){return true;}
-        return false;
+        else{return false;}
     }
     public void setLoc(int r,int c){
         this.loc = new Coord(r,c);

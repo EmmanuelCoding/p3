@@ -31,14 +31,15 @@ public class Coord {
         return false;
     }
     public boolean adjacent(Coord other){
-        if (other.c == (this.c - 1) || other.c == (this.c + 1)){
-            if (other.r == (this.r - 1) || other.r == (this.r + 1)){
-                return true;
-            }
+        if (other.c == (this.c - 1) || other.c == (this.c + 1)){//left or right
+            if (other.r == this.r){return true;}
+        }
+        if (other.r == (this.r - 1) || other.r == (this.r + 1)){//above or below
+            if (other.c == this.c){return true;}
         }
         return false;
     }
     public String toString(){
-        return "@(" + c + "," + r + ")";
+        return "@(" + r + "," + c + ")";
     }
 }

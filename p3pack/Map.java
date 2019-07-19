@@ -111,7 +111,7 @@ public class Map {
         //loop through things to see if there's anything with the same coordinate
         //add it to thingsatArray, if so
         for (Thing thing : things){
-            if (thing.getLoc().c == c.c && thing.getLoc().r == c.r){
+            if (thing.getLoc().equals(c)){
                 thingsatArray.add(thing);
             }
         }

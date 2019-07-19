@@ -18,7 +18,7 @@ public abstract class Thing implements Representable,Passable{
     public Coord getLoc(){return this.loc;}
     public Coord getPrevLoc(){return this.prevLoc;}
     public void setLoc(Coord c){
-        this.prevLoc = loc;
+        this.prevLoc = this.loc;
         this.loc = c;
     }
     @Override public String repr(){return this.repr;}

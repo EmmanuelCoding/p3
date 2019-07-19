@@ -451,10 +451,12 @@ public class MapTests {
     
     // simulate the correct movement.
     Weirdo z  = new Weirdo(new Coord(3,1),m, m.log);
+    System.out.print(z.chooseMove().toString());
     z.setLoc(new Coord(2,1));
-    
+    //System.out.print(Arrays.toString(m.thingsAt(new Coord(3,1))));
     // check actual vs. expected movement.
-    assertEqThing( m.thingsAt(new Coord(2,1))[0], z);
+    Thing[] things = m.thingsAt(new Coord(2, 1));
+    assertEqThing(things[0], z);
   }
   
   String mapStr4 =

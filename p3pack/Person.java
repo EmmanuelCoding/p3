@@ -6,12 +6,12 @@ public abstract class Person extends Thing{
 
     public Person(Coord loc, String repr, Map map, PrintStream log){
         super(loc,repr,map,log);
-        facing = Direction.N;
-        status = Status.Escaping;
+        this.facing = Direction.N;
+        this.status = Status.Escaping;
     }
     public abstract Coord chooseMove();
     @Override public void doAction(){
-        this.chooseMove();
+        this.setLoc(this.chooseMove());
     }
     public boolean isSafe(){
         return this.status == Status.Safe;

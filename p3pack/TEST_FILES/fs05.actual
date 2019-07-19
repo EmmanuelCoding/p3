@@ -1,0 +1,24 @@
+f@(1,3)s@(2,3)s@(2,4)map:
+||||||
+|.vf||
+|..ss|
+||>.e|
+||||||
+map:
+||||||
+|.vf||
+|..ss|
+||>.e|
+||||||
+map:
+||||||
+|.vf||
+|..ss|
+||>.e|
+||||||
+s@(2,3)spreadings@(1,3) spawneds@(2,3) killed f@(1,3)s@(3,3) spawneds@(2,2) spawneds@(2,4)spreadings@(1,4) spawneds@(3,4) spawneds@(2,5) spawnedmap:
+||||||
+|.vf||
+|..ss|
+||>.e|
+||||||

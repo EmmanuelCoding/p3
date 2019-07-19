@@ -32,12 +32,44 @@ public enum Spot implements Representable, Passable{
         return this.repr;
     }
     @Override public boolean canPassThrough(){
-        if (this != Wall){return true;}
-        else{return false;}
+        switch (this){
+            case Wall:
+                return false;
+            case Open:
+                return true;
+            case Exit:
+                return true;
+            case SignN:
+                return true;
+            case SignE:
+                return true;
+            case SignS:
+                return true;
+            case SignW:
+                return true;
+            default:
+                return true;
+        }
     }
     @Override public boolean canLookThrough(){
-        if (this != Wall){return true;}
-        else{return false;}
+        switch (this){
+            case Wall:
+                return false;
+            case Open:
+                return true;
+            case Exit:
+                return true;
+            case SignN:
+                return true;
+            case SignE:
+                return true;
+            case SignS:
+                return true;
+            case SignW:
+                return true;
+            default:
+                return true;
+        }
     }
     public void setLoc(int r,int c){
         this.loc = new Coord(r,c);

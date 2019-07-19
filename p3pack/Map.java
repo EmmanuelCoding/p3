@@ -122,40 +122,24 @@ public class Map {
     }
     public boolean canLookThroughLocation(Coord c){//true if no thing blocking view and not a wall
         boolean canLookThroughLocation = true;
-        Thing[] checkThings = thingsAt(c);
-        for (Thing thing : checkThings){
+        for (Thing thing : thingsAt(c)){
             if (!thing.canLookThrough()){
                 canLookThroughLocation = false;
                 break;
             }
         }
-        for (Spot[] roe: floorplan){
-            for (Spot s : roe){
-                if (!s.canLookThrough()){
-                    canLookThroughLocation = false;
-                    break;
-                }
-            }
-        }
+        if (!spotAt(c).canLookThrough()){canLookThroughLocation = false;}
         return canLookThroughLocation;
     }
     public boolean canPassThroughLocation(Coord c) {//true if no thing in the way and not a wall
         boolean canPassThroughLocation = true;
-        Thing[] checkThings = thingsAt(c);
-        for (Thing thing : checkThings){
+        for (Thing thing : thingsAt(c)){
             if (!thing.canPassThrough()){
                 canPassThroughLocation = false;
                 break;
             }
         }
-        for (Spot[] roe: floorplan){
-            for (Spot s : roe){
-                if (!s.canPassThrough()){
-                    canPassThroughLocation = false;
-                    break;
-                }
-            }
-        }
+        if (!spotAt(c).canPassThrough()){canPassThroughLocation = false;}
         return canPassThroughLocation;
     }
     public void iterate(){

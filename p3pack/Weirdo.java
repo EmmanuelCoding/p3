@@ -9,7 +9,7 @@ public class Weirdo extends Person{
         boolean canMove = true;
         Direction newFace = facing;
         Coord tryLoc = this.getLoc().step(newFace);
-        while (map.spotAt(tryLoc) == Spot.Wall || !map.canPassThroughLocation(tryLoc)){//while the spot is wall or can't be walked on
+        while (!map.canPassThroughLocation(tryLoc)){//while the spot is wall or can't be walked on
             newFace = newFace.cycle();
             ++numCycles;
             if (newFace.isOpposite(facing) || tryLoc == this.getPrevLoc()){newFace = newFace.cycle();++numCycles;}//dont go to previous location

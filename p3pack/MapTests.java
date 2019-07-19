@@ -451,7 +451,6 @@ public class MapTests {
     
     // simulate the correct movement.
     Weirdo z  = new Weirdo(new Coord(3,1),m, m.log);
-    System.out.print(z.chooseMove().toString());
     z.setLoc(new Coord(2,1));
     //System.out.print(Arrays.toString(m.thingsAt(new Coord(3,1))));
     // check actual vs. expected movement.

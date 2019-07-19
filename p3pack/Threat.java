@@ -13,18 +13,25 @@ public abstract class Threat extends Thing{
     @Override public void doAction(){
         charge++;
         if (charge == fullCharge){
-            log.print(otherString() + "spreading");
+            charge = 0;
+            log.print(this.toString() + "spreading");
+            spawn(this.getLoc());
             //call spawn for N,S,E,W if canPassThrough is true
-            if (map.canPassThroughLocation(this.getLoc().step(Direction.N))) {
+            //make sure the spot there exists (not null)
+            if (map.spotAt(this.getLoc().step(Direction.N)) != null &&
+                    map.spotAt(this.getLoc().step(Direction.N)).canPassThrough()) {
                 spawn(this.getLoc().step(Direction.N));
             }
-            if (map.canPassThroughLocation(this.getLoc().step(Direction.S))) {
+            if (map.spotAt(this.getLoc().step(Direction.S)) != null &&
+                    map.spotAt(this.getLoc().step(Direction.S)).canPassThrough()) {
                 spawn(this.getLoc().step(Direction.S));
             }
-            if (map.canPassThroughLocation(this.getLoc().step(Direction.E))) {
+            if (map.spotAt(this.getLoc().step(Direction.E)) != null &&
+                    map.spotAt(this.getLoc().step(Direction.E)).canPassThrough()) {
                 spawn(this.getLoc().step(Direction.E));
             }
-            if (map.canPassThroughLocation(this.getLoc().step(Direction.W))) {
+            if (map.spotAt(this.getLoc().step(Direction.W)) != null &&
+                    map.spotAt(this.getLoc().step(Direction.W)).canPassThrough()) {
                 spawn(this.getLoc().step(Direction.W));
             }
         }

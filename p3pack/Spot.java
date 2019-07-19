@@ -48,7 +48,7 @@ public enum Spot implements Representable, Passable{
             case SignW:
                 return true;
             default:
-                return true;
+                return false;
         }
     }
     @Override public boolean canLookThrough(){
@@ -68,7 +68,7 @@ public enum Spot implements Representable, Passable{
             case SignW:
                 return true;
             default:
-                return true;
+                return false;
         }
     }
     public void setLoc(int r,int c){

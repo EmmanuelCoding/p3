@@ -6,14 +6,15 @@ public class StickyIcky extends Threat{
 
     }
     @Override public void spawn(Coord c){
+        //makes new Sticky at c, if there isn't already one there
         boolean hasSticky = false;
-        //makes new StickyIcky if there isn't already one there
         for (Thing thing : map.thingsAt(c)) {
-            if (thing instanceof StickyIcky) {hasSticky = true;}
+            if (thing instanceof StickyIcky) {hasSticky = true;break;}
         }
-            if (!hasSticky){
-                StickyIcky newSticky = new StickyIcky(c, map,log);
-                log.print(this.repr() + newSticky.getLoc().toString() + " spawned");}
+        if (!hasSticky){
+            map.addThing(new StickyIcky(c,map,log));
+            log.print(this.repr() + this.getLoc().toString() + " spawned");
+        }
         //kills all Persons
         for (Thing t : map.thingsAt(c)){
             if (t instanceof Person){

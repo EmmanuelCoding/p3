@@ -5,24 +5,11 @@ w@(1,2)s@(1,6)s@(1,7)~@(3,5)f@(4,7)w@(1,2) moving Emap:
 |.v..~.f||
 ||.||||.||
 ||e|||||||
-w@(1,3) moving E~@(3,5)spreadingmap:
+w@(1,3) moving E~@(3,5)spreading~@(3,5) spawned~@(3,5) spawned~@(3,5) spawnedmap:
 ||||||||||
 ||..w.ss||
-|||||.|f||
-|.v..~.<||
+|||||~|f||
+|.v.~~~<||
 ||.||||.||
 ||e|||||||
-w@(1,4) moving Emap:
-||||||||||
-||...wss||
-|||||.|.||
-|.v..~.<||
-||.||||.||
-||e|||||||
-w@(1,5) moving Es@(1,6)spreadings@(1,6) killed f@(1,7)s@(1,5) spawneds@(1,6) killed w@(1,6)s@(1,7)spreadings@(2,7) spawneds@(1,7) killed w@(1,6)map:
-||||||||||
-||....ws||
-|||||.|.||
-|.v..~.<||
-||.||||.||
-||e|||||||
+w@(1,4) moving E

@@ -1,12 +1,30 @@
-~@(2,2)f@(3,2)map:
+begin simulation
+~@(2,2)
+f@(3,2)
+|||||||
+|.e...|
+|.~...|
+|.f..^|
+|||||||
+
+iteration 0
+map:
 |||||||
 |.e...|
 |.~...|
 |....^|
 |||||||
-~@(2,2)spreading~@(2,2) spawned~@(2,2) spawned~@(2,2) spawned~@(2,2) spawned@(1,2)map:
+iteration 1
+~@(2,2)spreading
+~@(1,2) spawned
+~@(3,2) spawned
+~@(2,3) spawned
+~@(2,1) spawned
+@(1,2)
+map:
 |||||||
 |.f...|
 |~~~..|
 |.~..^|
 |||||||
+end simulation

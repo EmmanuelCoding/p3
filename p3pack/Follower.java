@@ -46,6 +46,14 @@ public class Follower extends Person{
                 }
             }
         }
+        List<Thing> tRemoveN = new ArrayList<>(0);
+        List<Thing> tRemoveE = new ArrayList<>(0);
+        List<Thing> tRemoveS = new ArrayList<>(0);
+        List<Thing> tRemoveW = new ArrayList<>(0);
+        List<Spot> sRemoveN = new ArrayList<>(0);
+        List<Spot> sRemoveE = new ArrayList<>(0);
+        List<Spot> sRemoveS = new ArrayList<>(0);
+        List<Spot> sRemoveW = new ArrayList<>(0);
         //recognize if there is a wall/smoke in between signs or exits
             //check for WALLs first
         for (int row = 0;row < map.floorplan.length;row++){
@@ -57,18 +65,18 @@ public class Follower extends Person{
                     if (row == this.getLoc().r){
                         if (col < this.getLoc().c){//if it's West
                             for(Thing Wthing : thingsW){
-                                if (Wthing.getLoc().c < col){thingsW.remove(Wthing);}
+                                if (Wthing.getLoc().c < col){tRemoveW.add(Wthing);}
                             }
                             for (Spot Wsign : signsW){
-                                if (Wsign.getLoc().c < col){signsW.remove(Wsign);}
+                                if (Wsign.getLoc().c < col){sRemoveW.add(Wsign);}
                             }
                         }
                         if (col > this.getLoc().c){//if it's East
                             for(Thing Ething : thingsE){
-                                if (Ething.getLoc().c > col){thingsE.remove(Ething);}
+                                if (Ething.getLoc().c > col){tRemoveE.add(Ething);}
                             }
                             for (Spot Esign : signsE){
-                                if (Esign.getLoc().c < col){signsE.remove(Esign);}
+                                if (Esign.getLoc().c > col){sRemoveE.add(Esign);}
                             }
                         }
                     }
@@ -76,65 +84,71 @@ public class Follower extends Person{
                     if (col == this.getLoc().c){
                         if (row < this.getLoc().r){//if it's North
                             for(Thing Nthing : thingsN){
-                                if (Nthing.getLoc().r < row){thingsN.remove(Nthing);}
+                                if (Nthing.getLoc().r < row){tRemoveN.add(Nthing);}
                             }
                             for (Spot Nsign : signsN){
-                                if (Nsign.getLoc().r < row){signsN.remove(Nsign);}
+                                if (Nsign.getLoc().r < row){sRemoveN.add(Nsign);}
                             }
                         }
                         if (row > this.getLoc().r){//if it's South
                             for(Thing Sthing : thingsS){
-                                if (Sthing.getLoc().r > row){thingsS.remove(Sthing);}
+                                if (Sthing.getLoc().r > row){tRemoveS.add(Sthing);}
                             }
                             for (Spot Ssign : signsS){
-                                if (Ssign.getLoc().r < row){signsS.remove(Ssign);}
+                                if (Ssign.getLoc().r < row){sRemoveS.add(Ssign);}
                             }
                         }
                     }
                 }
             }
         }
+        //Get rid of stuff you can't see
+        thingsN.removeAll(tRemoveN);thingsE.removeAll(tRemoveE);thingsS.removeAll(tRemoveS);thingsW.removeAll(tRemoveW);
+        signsN.removeAll(sRemoveN);signsE.removeAll(sRemoveE);signsS.removeAll(sRemoveS);signsW.removeAll(sRemoveW);
             //check for Smoke,stripping out anything you cant see from NESW lists
         for (Thing Nthing : thingsN){
             if (Nthing instanceof Smoke){
                 for (Thing nthing : thingsN){
-                    if (nthing.getLoc().r < Nthing.getLoc().r){thingsN.remove(nthing);}
+                    if (nthing.getLoc().r < Nthing.getLoc().r){tRemoveN.add(nthing);}
                 }
                 for (Spot Nsign : signsN){
-                    if (Nsign.getLoc().r < Nthing.getLoc().r){signsN.remove(Nsign);}
+                    if (Nsign.getLoc().r < Nthing.getLoc().r){sRemoveN.add(Nsign);}
                 }
             }
         }
         for (Thing Sthing : thingsS){
             if (Sthing instanceof Smoke){
                 for (Thing sthing : thingsN){
-                    if (sthing.getLoc().r > Sthing.getLoc().r){thingsS.remove(sthing);}
+                    if (sthing.getLoc().r > Sthing.getLoc().r){tRemoveS.add(sthing);}
                 }
                 for (Spot Ssign : signsS){
-                    if (Ssign.getLoc().r > Sthing.getLoc().r){signsS.remove(Ssign);}
+                    if (Ssign.getLoc().r > Sthing.getLoc().r){sRemoveS.add(Ssign);}
                 }
             }
         }
         for (Thing Ething : thingsE){
             if (Ething instanceof Smoke){
                 for (Thing ething : thingsN){
-                    if (ething.getLoc().c < Ething.getLoc().c){thingsE.remove(ething);}
+                    if (ething.getLoc().c < Ething.getLoc().c){tRemoveE.add(ething);}
                 }
                 for (Spot Esign : signsE){
-                    if (Esign.getLoc().c < Ething.getLoc().c){signsE.remove(Esign);}
+                    if (Esign.getLoc().c < Ething.getLoc().c){sRemoveE.add(Esign);}
                 }
             }
         }
         for (Thing Wthing : thingsW){
             if (Wthing instanceof Smoke){
                 for (Thing wthing : thingsN){
-                    if (wthing.getLoc().c > Wthing.getLoc().c){thingsW.remove(wthing);}
+                    if (wthing.getLoc().c > Wthing.getLoc().c){tRemoveW.add(wthing);}
                 }
                 for (Spot Wsign : signsW){
-                    if (Wsign.getLoc().c > Wthing.getLoc().c){signsW.remove(Wsign);}
+                    if (Wsign.getLoc().c > Wthing.getLoc().c){sRemoveW.add(Wsign);}
                 }
             }
         }
+        //Get rid of stuff again
+        thingsN.removeAll(tRemoveN);thingsE.removeAll(tRemoveE);thingsS.removeAll(tRemoveS);thingsW.removeAll(tRemoveW);
+        signsN.removeAll(sRemoveN);signsE.removeAll(sRemoveE);signsS.removeAll(sRemoveS);signsW.removeAll(sRemoveW);
         boolean canMove = false;
         boolean signMove = false;
         Coord tryMove = this.getLoc().step(facing);

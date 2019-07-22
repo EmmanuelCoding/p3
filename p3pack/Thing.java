@@ -23,5 +23,4 @@ public abstract class Thing implements Representable,Passable{
     }
     @Override public String repr(){return this.repr;}
     @Override public String toString(){return (repr() + this.getLoc());}
-    public String otherString(){return (repr() + this.getLoc().toString());}
 }

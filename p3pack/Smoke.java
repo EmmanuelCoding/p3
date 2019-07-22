@@ -12,7 +12,7 @@ public class Smoke extends Threat{
         }
         if (!hasSmoke){
             map.addThing(new Smoke(c,map,log));
-            log.print(this.repr() + this.getLoc().toString() + " spawned");
+            log.println(this.repr() + c.toString() + " spawned");
         }
     }
     @Override public boolean canLookThrough(){

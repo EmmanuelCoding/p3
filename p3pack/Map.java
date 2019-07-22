@@ -13,7 +13,7 @@ public class Map {
 
     Map(String filename, PrintStream log) throws IOException{
         this.log = log;
-        //READ FILE////////////////////////////////////////////////////////////
+        //READ FILE/////////////////////////////////////////////////////////////////////////////////////////////////////
         //loop through file to determine map dimensions
         File infile = new File(filename);
         Scanner s1 = new Scanner(infile);
@@ -27,7 +27,7 @@ public class Map {
             ++rows;
         }
         s1.close();
-        //CREATE MAP///////////////////////////////////////////////////////////
+        //CREATE MAP////////////////////////////////////////////////////////////////////////////////////////////////////
         List<Thing> newThings = new ArrayList<>();
         //make empty floorplan
         floorplan = new Spot[rows][cols];
@@ -50,19 +50,15 @@ public class Map {
                                 switch (rowList.get(ro)[co]) {
                                     case "f"://Person follower
                                         newThings.add(new Follower(new Coord(ro, co), this, log));
-                                        log.print(newThings.get(newThings.size()-1).otherString());
                                         break;
                                     case "w"://Person weirdo
                                         newThings.add(new Weirdo(new Coord(ro, co), this, log));
-                                        log.print(newThings.get(newThings.size()-1).otherString());
                                         break;
                                     case "s"://Threat stickyIcky
                                         newThings.add(new StickyIcky(new Coord(ro, co), this, log));
-                                        log.print(newThings.get(newThings.size()-1).otherString());
                                         break;
                                     case "~"://Threat smoke
                                         newThings.add(new Smoke(new Coord(ro, co), this, log));
-                                        log.print(newThings.get(newThings.size()-1).otherString());
                                         break;
                                 }
                             }
@@ -96,8 +92,8 @@ public class Map {
     }
     public void addThing(Thing a) {
         if (things == null){things = new Thing[0];}
-        int cSize = things.length;
-        int nSize = cSize + 1;
+        int cSize = things.length;//current size
+        int nSize = cSize + 1;//new size
         Thing[] tmpArray = new Thing[nSize];
         for (int i = 0;i < cSize;i++){tmpArray[i] = things[i];}
         tmpArray[nSize - 1] = a;
@@ -139,7 +135,7 @@ public class Map {
                 break;
             }
         }
-        if (!spotAt(c).canPassThrough()){canPassThroughLocation = false;}
+        if (spotAt(c) == null || !spotAt(c).canPassThrough()){canPassThroughLocation = false;}
         return canPassThroughLocation;
     }
     public void iterate(){

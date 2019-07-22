@@ -14,7 +14,7 @@ public abstract class Threat extends Thing{
         charge++;
         if (charge == fullCharge){
             charge = 0;
-            log.print(this.toString() + "spreading");
+            log.println(this.toString() + "spreading");
             spawn(this.getLoc());
             //call spawn for N,S,E,W if canPassThrough is true
             //make sure the spot there exists (not null)

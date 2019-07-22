@@ -21,7 +21,7 @@ public abstract class Person extends Thing{
         super.setLoc(newLoc);
         if (map.spotAt(this.getLoc()) == Spot.Exit){
             status = Status.Safe;
-            log.print(this.getLoc().toString());//@(r,c)
+            log.println(this.getLoc().toString());//@(r,c)
         }
     }
     @Override public boolean canLookThrough(){

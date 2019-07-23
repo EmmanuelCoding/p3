@@ -1,21 +1,55 @@
-~@(2,2)w@(4,2)~@(4,4)w@(4,2) moving Nmap:
+begin simulation
+~@(2,2)
+w@(4,2)
+~@(4,4)
+|||||||
+|.e...|
+|.~...|
+|.....|
+|.w.~^|
+|||||||
+
+iteration 0
+w@(4,2) moving N
+w@(4,2) moving N
+map:
 |||||||
 |.e...|
 |.~...|
 |.w...|
 |...~^|
 |||||||
-~@(2,2)spreading~@(2,2) spawned~@(2,2) spawned~@(2,2) spawned~@(2,2) spawnedw@(3,2) moving N~@(4,4)spreading~@(4,4) spawned~@(4,4) spawned~@(4,4) spawnedmap:
+
+iteration 1
+~@(2,2)spreading
+~@(1,2) spawned
+~@(3,2) spawned
+~@(2,3) spawned
+~@(2,1) spawned
+w@(3,2) moving N
+w@(3,2) moving N
+~@(4,4)spreading
+~@(3,4) spawned
+~@(4,5) spawned
+~@(4,3) spawned
+map:
 |||||||
 |.~...|
 |~~~..|
 |.~.~.|
 |..~~~|
 |||||||
-w@(2,2) safew@(2,2) moving N@(1,2)map:
+
+iteration 2
+w@(2,2) safew@(2,2) moving N
+w@(2,2) safew@(2,2) moving N
+@(1,2)
+map:
 |||||||
 |.w...|
 |~~~..|
 |.~.~.|
 |..~~~|
 |||||||
+
+end simulation

@@ -1,72 +1,138 @@
-s@(2,1)s@(2,2)w@(3,3)w@(3,3) moving Nmap:
+begin simulation
+s@(2,1)
+s@(2,2)
+w@(3,3)
+||||||
+|....|
+|ss.<|
+|..w.|
+||||||
+
+iteration 0
+w@(3,3) moving Nw@(3,3) moving Nmap:
 ||||||
 |....|
 |ssw<|
 |....|
 ||||||
-w@(2,3) moving Nmap:
+
+iteration 1
+w@(2,3) moving Nw@(2,3) moving Nmap:
 ||||||
 |..w.|
 |ss.<|
 |....|
 ||||||
-w@(1,3) moving Emap:
+
+iteration 2
+w@(1,3) moving Ew@(1,3) moving Emap:
 ||||||
 |...w|
 |ss.<|
 |....|
 ||||||
-s@(2,1)spreadings@(2,1) spawneds@(2,1) spawneds@(2,2)spreadings@(2,2) spawneds@(2,2) spawneds@(2,2) spawnedw@(1,4) staying heremap:
-||||||
-|ss.w|
-|sss<|
-|ss..|
-||||||
+
+iteration 3
+s@(2,1)spreading
+s@(2,1) spawned
+s@(2,1) spawned
+s@(2,2)spreading
+s@(2,2) spawned
+s@(2,2) spawned
+s@(2,2) spawned
 w@(1,4) staying heremap:
 ||||||
 |ss.w|
 |sss<|
 |ss..|
 ||||||
+
+iteration 4
 w@(1,4) staying heremap:
 ||||||
 |ss.w|
 |sss<|
 |ss..|
 ||||||
+
+iteration 5
 w@(1,4) staying heremap:
 ||||||
 |ss.w|
 |sss<|
 |ss..|
 ||||||
-s@(2,1)spreadings@(2,2)spreadingw@(1,4) staying heres@(1,1)spreadings@(3,1)spreadings@(1,2)spreadings@(1,2) spawneds@(3,2)spreadings@(3,2) spawneds@(2,3)spreadings@(2,3) spawnedmap:
+
+iteration 6
+w@(1,4) staying heremap:
+||||||
+|ss.w|
+|sss<|
+|ss..|
+||||||
+
+iteration 7
+s@(2,1)spreading
+s@(2,2)spreading
+w@(1,4) staying heres@(1,1)spreading
+s@(3,1)spreading
+s@(1,2)spreading
+s@(1,2) spawned
+s@(3,2)spreading
+s@(3,2) spawned
+s@(2,3)spreading
+s@(2,3) spawned
+map:
 ||||||
 |sssw|
 |ssss|
 |sss.|
 ||||||
+
+iteration 8
 w@(1,4) staying heremap:
 ||||||
 |sssw|
 |ssss|
 |sss.|
 ||||||
+
+iteration 9
 w@(1,4) staying heremap:
 ||||||
 |sssw|
 |ssss|
 |sss.|
 ||||||
+
+iteration 10
 w@(1,4) staying heremap:
 ||||||
 |sssw|
 |ssss|
 |sss.|
 ||||||
-s@(2,1)spreadings@(2,2)spreadingw@(1,4) staying heres@(1,1)spreadings@(3,1)spreadings@(1,2)spreadings@(3,2)spreadings@(2,3)spreadings@(1,3)spreadings@(1,3) spawneds@(1,3) killed w@(1,4)s@(3,3)spreadings@(3,3) spawneds@(2,4)spreadings@(2,4) killed w@(1,4)map:
+
+iteration 11
+s@(2,1)spreading
+s@(2,2)spreading
+w@(1,4) staying heres@(1,1)spreading
+s@(3,1)spreading
+s@(1,2)spreading
+s@(3,2)spreading
+s@(2,3)spreading
+s@(1,3)spreading
+s@(1,3) spawned
+s@(1,3) killed w@(1,4)
+s@(3,3)spreading
+s@(3,3) spawned
+s@(2,4)spreading
+s@(2,4) killed w@(1,4)
+map:
 ||||||
 |sssw|
 |ssss|
 |ssss|
 ||||||
+
+end simulation

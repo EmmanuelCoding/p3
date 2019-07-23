@@ -11,7 +11,8 @@ public abstract class Person extends Thing{
     }
     public abstract Coord chooseMove();
     @Override public void doAction(){
-        this.setLoc(this.chooseMove());
+        if (this.getLoc().adjacent(this.chooseMove())){
+            this.setLoc(this.chooseMove());}
     }
     public boolean isSafe(){
         return this.status == Status.Safe;

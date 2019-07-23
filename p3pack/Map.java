@@ -142,7 +142,7 @@ public class Map {
         for (Thing thing : things){
             thing.doAction();
         }
-        log.print("map:\n" + this.toString());
+        log.println("map:\n" + this.toString());
     }
     @Override public String toString(){
         String deString = "";

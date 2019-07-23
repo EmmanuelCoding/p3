@@ -13,13 +13,13 @@ public class StickyIcky extends Threat{
         }
         if (!hasSticky){
             map.addThing(new StickyIcky(c,map,log));
-            log.print(this.repr() + this.getLoc().toString() + " spawned");
+            log.println(this.repr() + this.getLoc().toString() + " spawned");
         }
         //kills all Persons
         for (Thing t : map.thingsAt(c)){
             if (t instanceof Person){
                 ((Person) t).die();
-                log.print(this.repr() + this.getLoc().toString() + " killed " + t.repr() + t.getLoc().toString());
+                log.println(this.repr() + this.getLoc().toString() + " killed " + t.repr() + t.getLoc().toString());
             }
         }
     }
@@ -28,7 +28,7 @@ public class StickyIcky extends Threat{
         for (Thing thing : map.thingsAt(this.getLoc())){//check if there's a living person here and kill them
             if (thing instanceof Person && ((Person)thing).status != Status.Dead) {
                 ((Person) thing).die();
-                log.print(this.repr() + this.getLoc().toString() + " killed " + thing.repr() + thing.getLoc().toString());
+                log.println(this.repr() + this.getLoc().toString() + " killed " + thing.repr() + thing.getLoc().toString());
             }
         }
     }

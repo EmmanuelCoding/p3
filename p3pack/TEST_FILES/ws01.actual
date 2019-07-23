@@ -1,4 +1,17 @@
-w@(1,1)s@(1,2)w@(1,1) moving Es@(1,2) killed w@(1,2)map:
+begin simulation
+w@(1,1)
+s@(1,2)
+||||
+|ws|
+||||
+
+iteration 0
+w@(1,1) moving E
+w@(1,1) moving E
+s@(1,2) killed w@(1,2)
+map:
 ||||
 |.w|
 ||||
+
+end simulation

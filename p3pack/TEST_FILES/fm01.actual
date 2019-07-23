@@ -14,6 +14,7 @@ map:
 |.~...|
 |....^|
 |||||||
+
 iteration 1
 ~@(2,2)spreading
 ~@(1,2) spawned
@@ -27,4 +28,5 @@ map:
 |~~~..|
 |.~..^|
 |||||||
+
 end simulation

@@ -21,10 +21,10 @@ public class Weirdo extends Person{
                 this.isSafe();
                 log.print(this.repr() + this.getLoc().toString() + " safe");
             }
-            log.print(this.repr() + this.getLoc().toString() + " moving " + newFace);
+            log.println(this.repr() + this.getLoc().toString() + " moving " + newFace);
             return tryLoc;}
         else{
-            log.print(this.repr() + this.getLoc().toString() + " staying here");
+            log.println(this.repr() + this.getLoc().toString() + " staying here");
             return this.getLoc();
         }
     }

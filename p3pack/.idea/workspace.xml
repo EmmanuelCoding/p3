@@ -3,54 +3,47 @@
   <component name="ChangeListManager">
     <list default="true" id="ea275349-6ca2-4f64-a351-033ecc1198ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Coord.class" beforeDir="false" afterPath="$PROJECT_DIR$/Coord.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoordTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/CoordTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Direction$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Direction$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Direction.class" beforeDir="false" afterPath="$PROJECT_DIR$/Direction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EnumerationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/EnumerationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Follower.class" beforeDir="false" afterPath="$PROJECT_DIR$/Follower.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Follower.java" beforeDir="false" afterPath="$PROJECT_DIR$/Follower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FollowerTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/FollowerTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InterfaceTests$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/InterfaceTests$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InterfaceTests$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/InterfaceTests$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InterfaceTests$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/InterfaceTests$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/InterfaceTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/InterfaceTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Map.class" beforeDir="false" afterPath="$PROJECT_DIR$/Map.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MapTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/MapTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P3Tests.class" beforeDir="false" afterPath="$PROJECT_DIR$/P3Tests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Panic.class" beforeDir="false" afterPath="$PROJECT_DIR$/Panic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Panic.java" beforeDir="false" afterPath="$PROJECT_DIR$/Panic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PanicTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/PanicTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Passable.class" beforeDir="false" afterPath="$PROJECT_DIR$/Passable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/Person.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Representable.class" beforeDir="false" afterPath="$PROJECT_DIR$/Representable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Smoke.class" beforeDir="false" afterPath="$PROJECT_DIR$/Smoke.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Smoke.java" beforeDir="false" afterPath="$PROJECT_DIR$/Smoke.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SmokeTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/SmokeTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spot$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Spot$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Spot.class" beforeDir="false" afterPath="$PROJECT_DIR$/Spot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/Status.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StickyIcky.class" beforeDir="false" afterPath="$PROJECT_DIR$/StickyIcky.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StickyIckyTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/StickyIckyTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StickyIcky.java" beforeDir="false" afterPath="$PROJECT_DIR$/StickyIcky.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TEST_FILES/complex1.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex1.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/complex2.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex2.actual" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TEST_FILES/complex3.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex3.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/complex4.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex4.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/complex5.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex5.actual" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TEST_FILES/complex6.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex6.actual" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/ephemeral_testing_output_file.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/complex7.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex7.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/complex8.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex8.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/complex9.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/complex9.actual" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TEST_FILES/f01.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f01.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/f02.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f02.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/f03.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f03.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/f04.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f04.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/f05.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f05.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/f06.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f06.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/f07.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f07.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/f08.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f08.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/f09.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f09.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/f10.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/f10.actual" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TEST_FILES/fm01.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/fm01.actual" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w02.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w02.actual" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w03.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w03.actual" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w04.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w04.actual" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w05.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w05.actual" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST_FILES/w06.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/w06.actual" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Thing.class" beforeDir="false" afterPath="$PROJECT_DIR$/Thing.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Thing.java" beforeDir="false" afterPath="$PROJECT_DIR$/Thing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Threat.class" beforeDir="false" afterPath="$PROJECT_DIR$/Threat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Threat.java" beforeDir="false" afterPath="$PROJECT_DIR$/Threat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Weirdo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Weirdo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WeirdoTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/WeirdoTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/fm02.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/fm02.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/fs01.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/fs01.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/fs02.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/fs02.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/fs03.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/fs03.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/fs04.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/fs04.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/fs05.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/fs05.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/fs06.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/fs06.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/map1.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/map1.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/map2.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/map2.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/wm01.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/wm01.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/wm02.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/wm02.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/ws01.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/ws01.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/ws02.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/ws02.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/ws03.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/ws03.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/ws04.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/ws04.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/ws05.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/ws05.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TEST_FILES/ws06.actual" beforeDir="false" afterPath="$PROJECT_DIR$/TEST_FILES/ws06.actual" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weirdo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Weirdo.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,11 +57,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Map.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="60" column="95" selection-start-line="60" selection-start-column="95" selection-end-line="60" selection-end-column="95" />
+            <state relative-caret-position="273">
+              <caret line="137" column="87" selection-start-line="137" selection-start-column="87" selection-end-line="137" selection-end-column="87" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -77,10 +70,27 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Panic.java">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_212/jre/lib/rt.jar!/sun/misc/Unsafe.class">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="16" column="43" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+              <caret line="353" column="23" selection-start-line="353" selection-start-column="23" selection-end-line="353" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Person.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+              <folding>
+                <element signature="e#529#530#0" expanded="true" />
+                <element signature="e#578#579#0" expanded="true" />
+                <element signature="e#910#911#0" expanded="true" />
+                <element signature="e#937#938#0" expanded="true" />
+                <element signature="e#984#985#0" expanded="true" />
+                <element signature="e#1011#1012#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,39 +98,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PanicTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1277">
-              <caret line="265" column="64" selection-start-line="265" selection-start-column="64" selection-end-line="265" selection-end-column="64" />
+            <state relative-caret-position="504">
+              <caret line="289" column="34" selection-start-line="289" selection-start-column="34" selection-end-line="289" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Weirdo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MapTests.java">
+        <entry file="file://$PROJECT_DIR$/StickyIcky.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7803">
-              <caret line="468" column="33" selection-start-line="468" selection-start-column="33" selection-end-line="468" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Smoke.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-              <folding>
-                <element signature="e#115#116#0" expanded="true" />
-                <element signature="e#153#154#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Coord.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+            <state relative-caret-position="408">
+              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -143,23 +140,23 @@
         <option value="$PROJECT_DIR$/P3Tests.java" />
         <option value="$PROJECT_DIR$/Direction.java" />
         <option value="$PROJECT_DIR$/Coord.java" />
-        <option value="$PROJECT_DIR$/Weirdo.java" />
         <option value="$PROJECT_DIR$/MapTests.java" />
         <option value="$PROJECT_DIR$/Spot.java" />
         <option value="$PROJECT_DIR$/SmokeTests.java" />
-        <option value="$PROJECT_DIR$/StickyIcky.java" />
         <option value="$PROJECT_DIR$/Follower.java" />
-        <option value="$PROJECT_DIR$/Person.java" />
         <option value="$PROJECT_DIR$/Threat.java" />
         <option value="$PROJECT_DIR$/Thing.java" />
-        <option value="$PROJECT_DIR$/Map.java" />
         <option value="$PROJECT_DIR$/Panic.java" />
         <option value="$PROJECT_DIR$/Smoke.java" />
+        <option value="$PROJECT_DIR$/Person.java" />
+        <option value="$PROJECT_DIR$/StickyIcky.java" />
+        <option value="$PROJECT_DIR$/Map.java" />
+        <option value="$PROJECT_DIR$/Weirdo.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
+    <option name="x" value="1713" />
     <option name="width" value="1734" />
     <option name="height" value="1447" />
   </component>
@@ -168,6 +165,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -179,8 +178,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -208,17 +205,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PanicTests.test_f01">
-    <configuration name="FollowerTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FollowerTests" />
+  <component name="RunManager" selected="JUnit.PanicTests">
+    <configuration name="MapTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MapTests" />
       <module name="p3pack" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MapTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MapTests" />
+    <configuration name="PanicTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="p3pack" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PanicTests" />
+      <option name="METHOD_NAME" value="test_fm01" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -255,11 +255,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PanicTests.test_f01" />
-        <item itemvalue="JUnit.PanicTests.test_complex1" />
+        <item itemvalue="JUnit.PanicTests" />
         <item itemvalue="JUnit.PanicTests.test_fm01" />
+        <item itemvalue="JUnit.PanicTests.test_complex1" />
+        <item itemvalue="JUnit.PanicTests.test_f01" />
         <item itemvalue="Application.MapTests" />
-        <item itemvalue="Application.FollowerTests" />
       </list>
     </recent_temporary>
   </component>
@@ -290,7 +290,8 @@
       <workItem from="1563484949671" duration="2988000" />
       <workItem from="1563498323802" duration="6684000" />
       <workItem from="1563543033200" duration="3594000" />
-      <workItem from="1563752331283" duration="6018000" />
+      <workItem from="1563752331283" duration="6055000" />
+      <workItem from="1563849441655" duration="1666000" />
     </task>
     <task id="LOCAL-00001" summary="asdfasd">
       <created>1563104898848</created>
@@ -404,49 +405,56 @@
       <option name="project" value="LOCAL" />
       <updated>1563546609688</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="done!just gotta fix Panic">
+      <created>1563758451110</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1563758451110</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PanicTests_test_fm01 - 2019.07.21 at 20h 58m 40s.xml">
-      <configuration name="PanicTests.test_fm01" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PanicTests_test_fm01 - 2019.07.21 at 21h 01m 48s.xml">
-      <configuration name="PanicTests.test_fm01" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PanicTests_test_fm01 - 2019.07.21 at 21h 04m 14s.xml">
-      <configuration name="PanicTests.test_fm01" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PanicTests_test_fm01 - 2019.07.21 at 21h 08m 12s.xml">
-      <configuration name="PanicTests.test_fm01" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PanicTests_test_fm01 - 2019.07.21 at 21h 08m 50s.xml">
-      <configuration name="PanicTests.test_fm01" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PanicTests_test_fm01 - 2019.07.21 at 21h 09m 02s.xml">
-      <configuration name="PanicTests.test_fm01" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PanicTests_test_fm01 - 2019.07.21 at 21h 14m 09s.xml">
-      <configuration name="PanicTests.test_fm01" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PanicTests_test_fm01 - 2019.07.21 at 21h 14m 20s.xml">
-      <configuration name="PanicTests.test_fm01" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PanicTests_test_complex1 - 2019.07.21 at 21h 18m 23s.xml">
+    <history-entry file="PanicTests_test_complex1 - 2019.07.22 at 23h 02m 40s.xml">
       <configuration name="PanicTests.test_complex1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PanicTests_test_f01 - 2019.07.21 at 21h 18m 39s.xml">
-      <configuration name="PanicTests.test_f01" configurationId="JUnit" />
+    <history-entry file="PanicTests_test_fm01 - 2019.07.22 at 23h 02m 59s.xml">
+      <configuration name="PanicTests.test_fm01" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PanicTests - 2019.07.22 at 23h 04m 01s.xml">
+      <configuration name="PanicTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PanicTests - 2019.07.22 at 23h 04m 33s.xml">
+      <configuration name="PanicTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PanicTests - 2019.07.22 at 23h 08m 31s.xml">
+      <configuration name="PanicTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PanicTests - 2019.07.22 at 23h 08m 41s.xml">
+      <configuration name="PanicTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PanicTests - 2019.07.22 at 23h 09m 11s.xml">
+      <configuration name="PanicTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PanicTests - 2019.07.22 at 23h 11m 09s.xml">
+      <configuration name="PanicTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PanicTests - 2019.07.22 at 23h 11m 10s.xml">
+      <configuration name="PanicTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PanicTests - 2019.07.22 at 23h 13m 06s.xml">
+      <configuration name="PanicTests" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84950000" />
+    <option name="totallyTimeSpent" value="86653000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1734" height="1447" extended-state="0" />
+    <frame x="1713" y="0" width="1734" height="1447" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20131421" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2037037" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -456,16 +464,17 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.35388127" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3994755" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39878234" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4992785" weight="0.30157343" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4992785" weight="0.30136988" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007215" side_tool="true" weight="0.30157343" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32876712" />
+      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.3297491" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -521,6 +530,9 @@
     <MESSAGE value="fixing stuff" />
     <MESSAGE value="done!just gotta fix Panic" />
     <option name="LAST_COMMIT_MESSAGE" value="done!just gotta fix Panic" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/p3pack$PanicTests_test_fm01.ic" NAME="PanicTests.test_fm01 Coverage Results" MODIFIED="1563850978307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
@@ -599,20 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/junit-4.12.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/junit-4.12.jar!/org/junit/rules/RunRules.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -651,13 +649,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Weirdo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="12" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Direction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -676,45 +667,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/StickyIcky.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="13" lean-forward="true" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_212/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
           <caret line="747" column="19" selection-start-line="747" selection-start-column="19" selection-end-line="747" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" column="52" lean-forward="true" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
-          <folding>
-            <element signature="e#393#394#0" expanded="true" />
-            <element signature="e#439#440#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FollowerTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-323">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Follower.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="106" column="116" lean-forward="true" selection-start-line="106" selection-start-column="116" selection-end-line="106" selection-end-column="116" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -725,10 +681,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MapTests.java">
+    <entry file="file://$PROJECT_DIR$/Threat.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7803">
-          <caret line="468" column="33" selection-start-line="468" selection-start-column="33" selection-end-line="468" selection-end-column="33" />
+        <state relative-caret-position="187">
+          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -739,10 +695,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Threat.java">
+    <entry file="file://$PROJECT_DIR$/MapTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="40" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+        <state relative-caret-position="7803">
+          <caret line="468" column="33" selection-start-line="468" selection-start-column="33" selection-end-line="468" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Smoke.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#115#116#0" expanded="true" />
+            <element signature="e#153#154#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -753,31 +720,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Smoke.java">
+    <entry file="file://$PROJECT_DIR$/Person.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="238">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
           <folding>
-            <element signature="e#115#116#0" expanded="true" />
-            <element signature="e#153#154#0" expanded="true" />
+            <element signature="e#529#530#0" expanded="true" />
+            <element signature="e#578#579#0" expanded="true" />
+            <element signature="e#910#911#0" expanded="true" />
+            <element signature="e#937#938#0" expanded="true" />
+            <element signature="e#984#985#0" expanded="true" />
+            <element signature="e#1011#1012#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PanicTests.java">
+    <entry file="file://$PROJECT_DIR$/FollowerTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1277">
-          <caret line="265" column="64" selection-start-line="265" selection-start-column="64" selection-end-line="265" selection-end-column="64" />
+        <state relative-caret-position="-1383">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Follower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="106" column="116" selection-start-line="106" selection-start-column="116" selection-end-line="106" selection-end-column="116" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/junit-4.12.jar!/org/junit/internal/runners/statements/FailOnTimeout.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/junit-4.12.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="174" selection-start-line="174" selection-end-line="174" />
+          <folding>
+            <element signature="e#2111#2112#0" expanded="true" />
+            <element signature="e#2155#2156#0" expanded="true" />
+            <element signature="e#6484#6648#0" expanded="true" />
+            <element signature="e#6647#6648#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StickyIcky.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Map.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="95" selection-start-line="60" selection-start-column="95" selection-end-line="60" selection-end-column="95" />
+        <state relative-caret-position="273">
+          <caret line="137" column="87" selection-start-line="137" selection-start-column="87" selection-end-line="137" selection-end-column="87" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_212/jre/lib/rt.jar!/sun/misc/Unsafe.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="353" column="23" selection-start-line="353" selection-start-column="23" selection-end-line="353" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PanicTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="289" column="34" selection-start-line="289" selection-start-column="34" selection-end-line="289" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Weirdo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="41" lean-forward="true" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
         </state>
       </provider>
     </entry>

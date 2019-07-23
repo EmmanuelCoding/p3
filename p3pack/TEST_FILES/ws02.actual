@@ -1,48 +1,90 @@
-w@(1,1)s@(2,2)w@(1,1) moving Emap:
+begin simulation
+w@(1,1)
+s@(2,2)
+|||||
+|w..|
+|.s.|
+|...|
+|||||
+
+iteration 0
+w@(1,1) moving Ew@(1,1) moving Emap:
 |||||
 |.w.|
 |.s.|
 |...|
 |||||
-w@(1,2) moving Emap:
+
+iteration 1
+w@(1,2) moving Ew@(1,2) moving Emap:
 |||||
 |..w|
 |.s.|
 |...|
 |||||
+
+iteration 2
 w@(1,3) staying heremap:
 |||||
 |..w|
 |.s.|
 |...|
 |||||
-w@(1,3) staying heres@(2,2)spreadings@(2,2) spawneds@(2,2) spawneds@(2,2) spawneds@(2,2) spawnedmap:
+
+iteration 3
+w@(1,3) staying heres@(2,2)spreading
+s@(2,2) spawned
+s@(2,2) spawned
+s@(2,2) spawned
+s@(2,2) spawned
+map:
 |||||
 |.sw|
 |sss|
 |.s.|
 |||||
+
+iteration 4
 w@(1,3) staying heremap:
 |||||
 |.sw|
 |sss|
 |.s.|
 |||||
+
+iteration 5
 w@(1,3) staying heremap:
 |||||
 |.sw|
 |sss|
 |.s.|
 |||||
+
+iteration 6
 w@(1,3) staying heremap:
 |||||
 |.sw|
 |sss|
 |.s.|
 |||||
-w@(1,3) staying heres@(2,2)spreadings@(1,2)spreadings@(1,2) spawneds@(1,2) killed w@(1,3)s@(1,2) spawneds@(3,2)spreadings@(3,2) spawneds@(3,2) spawneds@(2,3)spreadings@(2,3) killed w@(1,3)s@(2,1)spreadingmap:
+
+iteration 7
+w@(1,3) staying heres@(2,2)spreading
+s@(1,2)spreading
+s@(1,2) spawned
+s@(1,2) killed w@(1,3)
+s@(1,2) spawned
+s@(3,2)spreading
+s@(3,2) spawned
+s@(3,2) spawned
+s@(2,3)spreading
+s@(2,3) killed w@(1,3)
+s@(2,1)spreading
+map:
 |||||
 |ssw|
 |sss|
 |sss|
 |||||
+
+end simulation

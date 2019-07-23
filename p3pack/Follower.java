@@ -151,60 +151,51 @@ public class Follower extends Person{
         signsN.removeAll(sRemoveN);signsE.removeAll(sRemoveE);signsS.removeAll(sRemoveS);signsW.removeAll(sRemoveW);
         boolean canMove = false;
         boolean signMove = false;
-        Coord tryMove = this.getLoc().step(facing);
+        Coord tryMove = this.getLoc().step(facing);//keep moving in current direction
         //move in proper direction
         Thing[][] tdirections = {thingsN.toArray(new Thing[0]),thingsE.toArray(new Thing[0]),thingsS.toArray(new Thing[0]),thingsW.toArray(new Thing[0])};
         Spot[][] sdirections = {signsN.toArray(new Spot[0]),signsE.toArray(new Spot[0]),signsS.toArray(new Spot[0]),signsW.toArray(new Spot[0])};
+        //Check for exits
             //First,check if there are any signs to go to
-
-        //are there any signs to move towards?
-        for (Spot[] signsD : sdirections) {//are you standing on one?
+        for (Spot[] signsD : sdirections) {//if standing on a sign go in its direction
             for (Spot sign : signsD) {
                 if (sign.getLoc() == this.getLoc()){
                     canMove = true;
                     signMove = true;
                     tryMove = sign.getLoc().step(sign.direction);
+                    log.println(this.repr() + this.getLoc().toString() + " moving " + sign.direction);
                     break;
                 }
             }
         }
-        for (Spot[] signsD : sdirections) {
-            for (Spot sign : signsD) {
-                if (sign.direction == this.facing || sign.direction.isOpposite(this.facing)) {//if it's in same direction(or opposite), decide where to go
-                    if (!(this.getLoc().step(sign.direction) == this.getPrevLoc())) {
-                        signMove = true;
-                        canMove = true;
-                        tryMove = this.getLoc().step(sign.direction);
+        if (!canMove) {
+            for (Spot[] signsD : sdirections) {//if it's in same direction(or opposite), decide where to go
+                for (Spot sign : signsD) {
+                    if (sign.direction == this.facing || sign.direction.isOpposite(this.facing)) {
+                        if (!(this.getLoc().step(sign.direction) == this.getPrevLoc())) {
+                            signMove = true;
+                            canMove = true;
+                            tryMove = this.getLoc().step(sign.direction);
+                            log.println(this.repr() + this.getLoc().toString() + " moving " + sign.direction);
+                            break;
+                        }
                     }
                 }
             }
         }
-        if (this.facing == Direction.N){
-            if (!signsN.isEmpty()){
-                signMove = true;
-                tryMove = this.getLoc().step(signsN.get(0).direction);
-            }
+        if (!canMove) {//if there is any sign at all, go to it
+           for (Spot[] signsD : sdirections){//normal for loop for this
+               if (signsD != null && signsD.length != 0){
+                   signMove = true;
+
+                   tryMove = this.getLoc().step(signsD[0].direction);
+                   break;
+               }
+           }
         }
-        if (this.facing == Direction.E){
-            if (!signsE.isEmpty()){
-                signMove = true;
-                tryMove = this.getLoc().step(signsE.get(0).direction);
-            }
-        }
-        if (this.facing == Direction.S){
-            if (!signsS.isEmpty()){
-                signMove = true;
-                tryMove = this.getLoc().step(signsS.get(0).direction);
-            }
-        }
-        if (this.facing == Direction.W){
-            if (!signsW.isEmpty()){
-                signMove = true;
-                tryMove = this.getLoc().step(signsW.get(0).direction);
-            }
-        }
+        //if there are no signs to go to, choose the first available direction
         Coord cycMove = this.getLoc().step(facing);
-        if (!signMove) {//if can't signMove
+        if (!signMove) {
             int cycles = 0;
             while (!map.canPassThroughLocation(cycMove) && cycles < 4) {
                 facing.cycle();
@@ -216,3 +207,28 @@ public class Follower extends Person{
     return tryMove;
     }
 }
+/*if (this.facing == Direction.N) {
+        if (!signsN.isEmpty()) {
+        signMove = true;
+        tryMove = this.getLoc().step(signsN.get(0).direction);
+        }
+        }
+        if (this.facing == Direction.E) {
+        if (!signsE.isEmpty()) {
+        signMove = true;
+        tryMove = this.getLoc().step(signsE.get(0).direction);
+        }
+        }
+        if (this.facing == Direction.S) {
+        if (!signsS.isEmpty()) {
+        signMove = true;
+        tryMove = this.getLoc().step(signsS.get(0).direction);
+        }
+        }
+        if (this.facing == Direction.W) {
+        if (!signsW.isEmpty()) {
+        signMove = true;
+        tryMove = this.getLoc().step(signsW.get(0).direction);
+        }
+        }
+ */

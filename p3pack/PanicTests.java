@@ -237,7 +237,7 @@ public class PanicTests {
   }
   
   // 1 second max per method tested
-  @Rule public Timeout globalTimeout = Timeout.seconds(1);
+  @Rule public Timeout globalTimeout = Timeout.seconds(2);
   
   // Panic Tests (from the sample maps)
   @Test(timeout=2000) public void test_complex1() throws Exception{ test_simulation("complex1"); }

@@ -9,7 +9,9 @@ w@(3,3)
 ||||||
 
 iteration 0
-w@(3,3) moving Nw@(3,3) moving Nmap:
+w@(3,3) moving N
+w@(3,3) moving N
+map:
 ||||||
 |....|
 |ssw<|
@@ -17,7 +19,9 @@ w@(3,3) moving Nw@(3,3) moving Nmap:
 ||||||
 
 iteration 1
-w@(2,3) moving Nw@(2,3) moving Nmap:
+w@(2,3) moving N
+w@(2,3) moving N
+map:
 ||||||
 |..w.|
 |ss.<|
@@ -25,7 +29,9 @@ w@(2,3) moving Nw@(2,3) moving Nmap:
 ||||||
 
 iteration 2
-w@(1,3) moving Ew@(1,3) moving Emap:
+w@(1,3) moving E
+w@(1,3) moving E
+map:
 ||||||
 |...w|
 |ss.<|
@@ -40,7 +46,8 @@ s@(2,2)spreading
 s@(2,2) spawned
 s@(2,2) spawned
 s@(2,2) spawned
-w@(1,4) staying heremap:
+w@(1,4) staying here
+map:
 ||||||
 |ss.w|
 |sss<|
@@ -48,7 +55,8 @@ w@(1,4) staying heremap:
 ||||||
 
 iteration 4
-w@(1,4) staying heremap:
+w@(1,4) staying here
+map:
 ||||||
 |ss.w|
 |sss<|
@@ -56,7 +64,8 @@ w@(1,4) staying heremap:
 ||||||
 
 iteration 5
-w@(1,4) staying heremap:
+w@(1,4) staying here
+map:
 ||||||
 |ss.w|
 |sss<|
@@ -64,7 +73,8 @@ w@(1,4) staying heremap:
 ||||||
 
 iteration 6
-w@(1,4) staying heremap:
+w@(1,4) staying here
+map:
 ||||||
 |ss.w|
 |sss<|
@@ -74,7 +84,8 @@ w@(1,4) staying heremap:
 iteration 7
 s@(2,1)spreading
 s@(2,2)spreading
-w@(1,4) staying heres@(1,1)spreading
+w@(1,4) staying here
+s@(1,1)spreading
 s@(3,1)spreading
 s@(1,2)spreading
 s@(1,2) spawned
@@ -90,7 +101,8 @@ map:
 ||||||
 
 iteration 8
-w@(1,4) staying heremap:
+w@(1,4) staying here
+map:
 ||||||
 |sssw|
 |ssss|
@@ -98,7 +110,8 @@ w@(1,4) staying heremap:
 ||||||
 
 iteration 9
-w@(1,4) staying heremap:
+w@(1,4) staying here
+map:
 ||||||
 |sssw|
 |ssss|
@@ -106,7 +119,8 @@ w@(1,4) staying heremap:
 ||||||
 
 iteration 10
-w@(1,4) staying heremap:
+w@(1,4) staying here
+map:
 ||||||
 |sssw|
 |ssss|
@@ -116,7 +130,8 @@ w@(1,4) staying heremap:
 iteration 11
 s@(2,1)spreading
 s@(2,2)spreading
-w@(1,4) staying heres@(1,1)spreading
+w@(1,4) staying here
+s@(1,1)spreading
 s@(3,1)spreading
 s@(1,2)spreading
 s@(3,2)spreading
